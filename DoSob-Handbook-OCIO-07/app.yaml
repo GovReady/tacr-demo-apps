@@ -1,0 +1,83 @@
+id: app
+title: DoSob  Handbook –07
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/dosob-handbook--07
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of DoSob  Handbook –07
+    long: Generates compliance documentation of DoSob  Handbook –07 as it pertains
+      to managing the security of CUI (Controlled Unclassified Information) as per
+      NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Department of Sobriety Handbook -07 documents and sets forth the Department
+    Information Technology security risk assesssment procedures.
+
+    This application will make sure you are properly using DoSob  Handbook –07
+    to protect CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_PM_9
+  title: NIST 800-53r4 PM-9 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses DoSob  Handbook –07 to the organization:
+
+    a. Develops a comprehensive strategy to manage risk to organizational operations
+    and assets, individuals, other organizations, and the Nation associated with the
+    operation and use of information systems;
+
+    b. Implements the risk management strategy consistently across the organization;
+    and
+
+    c. Reviews and updates the risk management strategy [Assignment: organization-defined
+    frequency] or as required, to address organizational changes. Department of Sobriety
+    Handbook -07 documents and sets forth the Department Information Technology
+    security risk assesssment procedures.
+
+- id: ssp_nist80053r4_RA_1
+  title: NIST 800-53r4 RA-1 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses DoSob  Handbook –07 to the organization:
+
+    a. Develops, documents, and disseminates to [Assignment: organization-defined
+    personnel or roles]:
+
+    a.1. A risk assessment policy that addresses purpose, scope, roles, responsibilities,
+    management commitment, coordination among organizational entities, and compliance;
+    and
+
+    a.2. Procedures to facilitate the implementation of the risk assessment policy
+    and associated risk assessment controls; and
+
+    b. Reviews and updates the current:
+
+    b.1. Risk assessment policy [Assignment: organization-defined frequency]; and
+
+    b.2. Risk assessment procedures [Assignment: organization-defined frequency].
+    Department of Sobriety Handbook -07 documents and sets forth the Department
+    Information Technology security risk assesssment procedures.
+

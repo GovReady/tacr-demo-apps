@@ -1,0 +1,132 @@
+id: app
+title: TACR System Security Policy
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-system-security-policy
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of TACR System Security Policy
+    long: Generates compliance documentation of TACR System Security Policy as it
+      pertains to managing the security of CUI (Controlled Unclassified Information)
+      as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    The TACR System Security Policy documents and sets forth the security policies
+    fo the TACR System.
+
+    This application will make sure you are properly using TACR System Security Policy
+    to protect CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+
+- id: ssp_nist80053r4_AC_2
+  title: NIST 800-53r4 AC-2 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses TACR System Security Policy to ...
+
+- id: ssp_nist80053r4_AC_19
+  title: NIST 800-53r4 AC-19 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses TACR System Security Policy to the organization:
+
+    a. Establishes usage restrictions, configuration requirements, connection requirements,
+    and implementation guidance for organization-controlled mobile devices; and
+
+    b. Authorizes the connection of mobile devices to organizational information systems.
+    The TACR System Security Policy documents and sets forth the security policies
+    fo the TACR System.
+
+- id: ssp_nist80053r4_AC_22
+  title: NIST 800-53r4 AC-22 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses TACR System Security Policy to the organization:
+
+    a. Designates individuals authorized to post information onto a publicly accessible
+    information system;
+
+    b. Trains authorized individuals to ensure that publicly accessible information
+    does not contain nonpublic information;
+
+    c. Reviews the proposed content of information prior to posting onto the publicly
+    accessible information system to ensure that nonpublic information is not included;
+    and
+
+    d. Reviews the content on the publicly accessible information system for nonpublic
+    information [Assignment: organization-defined frequency] and removes such information,
+    if discovered. The TACR System Security Policy documents and sets forth the security
+    policies fo the TACR System.
+
+- id: ssp_nist80053r4_MA_1
+  title: NIST 800-53r4 MA-1 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses TACR System Security Policy to the organization:
+
+    a. Develops, documents, and disseminates to [Assignment: organization-defined
+    personnel or roles]:
+
+    a.1. A system maintenance policy that addresses purpose, scope, roles, responsibilities,
+    management commitment, coordination among organizational entities, and compliance;
+    and
+
+    a.2. Procedures to facilitate the implementation of the system maintenance policy
+    and associated system maintenance controls; and
+
+    b. Reviews and updates the current:
+
+    b.1. System maintenance policy [Assignment: organization-defined frequency]; and
+
+    b.2. System maintenance procedures [Assignment: organization-defined frequency].
+    The TACR System Security Policy documents and sets forth the security policies
+    fo the TACR System.
+
+- id: ssp_nist80053r4_PE_1
+  title: NIST 800-53r4 PE-1 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses TACR System Security Policy to the organization:
+
+    a. Develops, documents, and disseminates to [Assignment: organization-defined
+    personnel or roles]:
+
+    a.1. A physical and environmental protection policy that addresses purpose, scope,
+    roles, responsibilities, management commitment, coordination among organizational
+    entities, and compliance; and
+
+    a.2. Procedures to facilitate the implementation of the physical and environmental
+    protection policy and associated physical and environmental protection controls;
+    and
+
+    b. Reviews and updates the current:
+
+    b.1. Physical and environmental protection policy [Assignment: organization-defined
+    frequency]; and
+
+    b.2. Physical and environmental protection procedures [Assignment: organization-defined
+    frequency]. The TACR System Security Policy documents and sets forth the security
+    policies fo the TACR System.
+

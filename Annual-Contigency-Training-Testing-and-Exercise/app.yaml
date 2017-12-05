@@ -1,0 +1,76 @@
+id: app
+title: Annual Contingency Training, Testing, and Exercise
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/annual-contigency-training,-testing,-and-exercise
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2.1
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: NIST 800-53r4 Compliance of Annual Contigency Training, Testing,
+      and Exercise
+    long: Generates compliance documentation of Annual Contigency Training, Testing,
+      and Exercise as it pertains to NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Annual Contingency Training, Testing, and Exercise is a yearly validation and
+    practice of the TACR System Contigency Plan.
+
+    This application will make sure you are properly using Annual Contigency Training,
+    Testing, and Exercise to protect CUI (Controlled Unclassified Information) as
+    per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_CP_3
+  title: NIST 800-53r4 CP-3 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Annual Contigency Training, Testing, and Exercise to the
+    organization provides contingency training to information system users consistent
+    with assigned roles and responsibilities:
+
+    a. Within [Assignment: organization-defined time period] of assuming a contingency
+    role or responsibility;
+
+    b. When required by information system changes; and
+
+    c. [Assignment: organization-defined frequency] thereafter. Annual Contingency
+    Training, Testing, and Exercise is a yearly validation and practice of the TACR
+    System Contigency Plan.
+
+- id: ssp_nist80053r4_CP_4
+  title: NIST 800-53r4 CP-4 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Annual Contigency Training, Testing, and Exercise to the
+    organization:
+
+    a. Tests the contingency plan for the information system [Assignment: organization-defined
+    frequency] using [Assignment: organization-defined tests] to determine the effectiveness
+    of the plan and the organizational readiness to execute the plan;
+
+    b. Reviews the contingency plan test results; and
+
+    c. Initiates corrective actions, if needed. Annual Contingency Training, Testing,
+    and Exercise is a yearly validation and practice of the TACR System
+    Contigency Plan.
+

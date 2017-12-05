@@ -1,0 +1,196 @@
+id: app
+title: TACR Configuration Management
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-ssp-text
+- govready.com/apps/compliance/2017/configuration-management
+version: 0.5
+icon: app.png
+catalog:
+  category: Description
+  vendor: ContractorCo
+  vendor_url: http://www.ContractorCo.com
+  status: draft
+  version: 0.3
+  source_url: https://github.com/GovReady/ssp-via-govready/tree/master/out/generic/configuration-management
+  description:
+    short: Configuration Management for TACR
+    long: Generates the Configuration Management Plan for TACR
+
+introduction:
+  format: markdown
+  template: >-
+    Generates the Configuration Management Plan for TACR
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: configuration_management
+  title: Configuration Management
+  format: markdown
+  template: >+
+    # TACR Configuration Management
+
+    <!-- This page is important for FedRAMP compliance. See the CM family of controls, including CM-9. Code Climate is part of SA-11 (1), SI-3, and RA-5. -->
+
+
+    This document describes how the ContractorCo/TACR team approaches configuration management of the TACR General Services platform.
+
+    ## Overview
+
+    We use a combination of inherited Puppet configuration and ContractorCo-developed Ansible configuration. New servers are spun up using only Ansible, and we will eventually migrate all servers to this configuration. We have a centralized Puppet server that holds configuration for our instances. Puppet agent does not run on the instances, meaning that updates must be manually pulled from the Puppet server. Updates to configuration, for example changes to Apache, happen on the Puppet server and then are pulled to the corresponding instance.
+
+
+    Our security groups, IP address whitelisting, and additional configuration are managed by Ansible (inside a Docker container). We use a git repository of playbooks, so updates are pushed from our local computers. New servers are spun up using Ansible playbooks, and software upgrades, reboots, password management, etc. are also pushed via Ansible.
+
+
+    ## What goes into configuration management?
+
+    In short, everything needed to run and operate the platform that is not a _secret_. (_tbd: secret key management_)
+
+
+    Here are some examples that should be in configuration management:
+
+
+      * CI pipelines (Jenkins)
+      * Infrastructure/network configuration (Puppet and Ansible)
+      * VM setup and quantity (Ansible)
+      * Software configuration (Puppet and Ansible)
+      * ContractorCo-developed code
+      * Application configuration (WordPress features)
+
+
+    ## Where should all this configuration go?
+
+    All configuration must be stored in Gitlab using the following "Change Workflow" unless it is a _secret_.
+
+
+    ## How do we test these changes?
+
+    If possible, first test the changes locally. After that, upload them to a development environment where either manual or automated testing needs to be run.
+
+
+    Security tests need to be executed in the development environment where changes are applied.
+
+
+    ## Change workflow
+
+
+      1. All configuration changes must flow through a git repository, centrally managed through Gitlab, unless they contain sensitive information.
+      1. A change is initiated and discussed as a "Backlog" ticket in [the JIRA TACRPortal](blank.md).
+      1. During Sprint Planning, the ticket is prioritized and may get moved from "Backlog" to "ToDo".
+      1. A developer is assigned to the ticket as it moves from "ToDo" to "In Progress".
+      1. After development and local testing is performed, the developer will initiate a "Merge Request" (MR).
+      1. The MR is reviewed by someone other than the committer. Pairing via screen-sharing
+      is encouraged and qualifies as a review. Review should include assessment of architectural design, DRY principles, security and code quality.
+      1. The reviewer merges the MR.
+      1. A continuous integration (CI) server handles automated tests and continuous deployment (CD) of the merged changes.
+         * All changes are deployed to a testing environment, such as development.
+         * Any and all automated tests are run.
+         * If all tests pass, changes can be promoted for deployment to production in the pipeline.
+      1. The CI/CD tool uses Gitlab repositories and the production database as the canonical source of truth for what the platform should look like.
+
+
+    ## What if a configuration changed and it is not in Configuration Management?
+
+
+    If possible, Configuration Management tools need to be set up to always roll back to a known state. Other than that, these tools need to be able to "recreate" all settings from the known configurations.
+
+
+    ## Puppet Configuration
+
+
+    User and ssh key information is managed by Puppet (as well as in Ansible).  When updating any user information or Apache configuration, changes should be made on the Puppet server.  It is good practice to test all changes as a puppet dry run before applying them.  Permissions can be modified on a per server level by editing the Puppet node files from the puppet server. Puppet is run on demand, to prevent mistakes or untested changes from being applied.  This means that after making updates to puppet-managed configuration, you must run puppet to apply the changes, as described in our documentation.
+
+
+    ## Ansible Configuration
+
+
+    Ansible is used to manage additional user/ssh information, as well as AWS configuration, server spin-ups, and security groups.  We pull Ansible configuration from a centralized git repository and run the commands from our local instances.  Security settings like password management, ssh keys, and whitelisting should be managed by Ansible.  Additionally, software updates and AIDE database refreshes should originate from Ansible playbooks.   
+
+
+    ## Git Configuration
+
+
+    Servers should all originate from git repositories.  This ensures a centralized backup, change history, and ability to rollback changes.  Additionally, servers should have local git repositories, so that changes to the systems for software updates, and anything else changed locally, is recorded.  Git commits should contain the date, the name of the user making the commit, and the corresponding ticket number, if any.  
+
+
+    ## WordPress Specific Configuration
+
+
+    Configuration management in WordPress for the WordPress 7 sites are handled through the use of Features and `hook_update_N` to make the necessary changes to site configuration. Each site has its own site_deploy module that orchestrates deployments.  If a feature needs to be reverted, it is reverted through a `hook_update_N` placed either in its own `.install` file or in site_deploy's `.install` file.  When code is deployed to sandbox, development  or production environments, `drush updb` is run, which runs any `hook_update_N`'s that have not been run.
+    
+
+    For many of the common configuration tasks, the module hook_update_deploy_tools is used to make sure that any `hook_update_N`'s that run follow a solid model of: make the change, verify it was made, then report that it was made.  Records of these events are output to the terminal of the engineer deploying the code, and to WordPress Watchdog.
+
+
+    ## Gitlab contribution guidelines
+
+
+    <!-- As long as these Gitlab guidelines comply with the FedRAMP-required policies above and our ContractorCo Gitlab requirements, we can adjust them at will, according to our team preferences. -->
+
+
+    Because TACR is built and maintained by ContractorCo, we follow our standard code development guidelines. These are our team practices within those requirements.
+
+
+    ### Forking
+
+
+    Each engineer works from their own fork of the repository and only push code to their own fork.  When they are ready to have their work reviewed, they create a merge request from a branch in their fork, to the upstream master branch.  All contributions come through merge requests.
+
+
+    ### Branching
+
+
+    Each upstream code repository has at least two branches.  The development environment tracks the master branch and engineers will rebase upon and create merge requests against the master branch.  The production server tracks the production branch.  Code is moved from the master branch to the production branch via the actions of the release manager.
+
+
+    Branching is encouraged in the upstream repository if multiple engineers need to collaborate on something that can not be continuously merged into the master branch. The rationale for branching within a team is that paired collaboration on a single branch avoids certain types of friction:
+
+
+      * Having to create multiple forked PRs in order to contribute to the branch
+      * Having to add new users to forked repositories as collaborators in order to have people directly contribute on short-lived forked branches
+
+
+    When contributing directly on a branch, we're able to modify work-in-progress (WIP) pull requests and encourage collaboration across the Cloud Operations team.
+
+    
+    ### Squashing commits
+
+
+    [Squashing commits](blank.md) is allowed and encouraged within an engineer's branch, but discouraged, except in rare instances in master and production branches which are fast forward only and block force pushes.
+
+
+    ### Rebase or merge
+
+
+    The team prefers [rebasing over merging](blank.md).  Ongoing work should always be rebased upon the master branch.
+
+
+    ### When should a Merge Request (MR) be created?
+
+
+    Work-in-progress MRs are encouraged. If you create a work-in-progress MR, you might also make it plain in the MR name with a `[WIP]` prefix. When a MR is ready for review, remove the `[WIP]` label.  A MR with a WIP label is blocked from merging by Gitlab.
+
+
+    Merge requests should be created whenever code is ready for review, prior to being merged into the master branch.
+
+
+    ### Should MRs be assigned?
+
+
+    MRs are typically not assigned in Gitlab, unless someone specifically needs to sign off on the change.
+
+
+    You can request a review using Gitlab's built-in tools, mention someone in the MR with the `@` notation, or contact them outside the Gitlab context to request a review.
+
+    
+    ### When reviewing a MR, should the change be tested locally?
+
+    
+    Whenever possible, the proposed changes should be tested locally. Because of the nature of many of the TACR repositories and deployment environments, local testing is not always possible or practical. Visual code review, however, is always required.  In the event that merged code breaks the dev environment, the decision will be made at the time to either revert the merge, or fix the issue with a subsequent commit.
+
+

@@ -1,0 +1,113 @@
+id: app
+title: Incident Response Plan (IRP)
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/incident-response-plan-(irp)
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Incident Response Plan (IRP)
+    long: Generates compliance documentation of Incident Response Plan (IRP) as it
+      pertains to managing the security of CUI (Controlled Unclassified Information)
+      as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    The Incident Response Plan sets forth and documents the actions to be undertaken
+    to address and recover from adverse performance events impacting TACR.
+
+    This application will make sure you are properly using Incident Response Plan
+    (IRP) to protect CUI (Controlled Unclassified Information) as per NIST 800-53r4
+    controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_IR_1
+  title: NIST 800-53r4 IR-1 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Incident Response Plan (IRP) to the organization:
+
+    a. Develops, documents, and disseminates to [Assignment: organization-defined
+    personnel or roles]:
+
+    a.1. An incident response policy that addresses purpose, scope, roles, responsibilities,
+    management commitment, coordination among organizational entities, and compliance;
+    and
+
+    a.2. Procedures to facilitate the implementation of the incident response policy
+    and associated incident response controls; and
+
+    b. Reviews and updates the current:
+
+    b.1. Incident response policy [Assignment: organization-defined frequency]; and
+
+    b.2. Incident response procedures [Assignment: organization-defined frequency].
+    The Incident Response Plan sets forth and documents the actions to be undertaken
+    to address and recover from adverse performance events impacting TACR.
+
+- id: ssp_nist80053r4_IR_8
+  title: NIST 800-53r4 IR-8 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Incident Response Plan (IRP) to the organization:
+
+    a. Develops an incident response plan that:
+
+    a.1. Provides the organization with a roadmap for implementing its incident response
+    capability;
+
+    a.2. Describes the structure and organization of the incident response capability;
+
+    a.3. Provides a high-level approach for how the incident response capability fits
+    into the overall organization;
+
+    a.4. Meets the unique requirements of the organization, which relate to mission,
+    size, structure, and functions;
+
+    a.5. Defines reportable incidents;
+
+    a.6. Provides metrics for measuring the incident response capability within the
+    organization;
+
+    a.7. Defines the resources and management support needed to effectively maintain
+    and mature an incident response capability; and
+
+    a.8. Is reviewed and approved by [Assignment: organization-defined personnel or
+    roles];
+
+    b. Distributes copies of the incident response plan to [Assignment: organization-defined
+    incident response personnel (identified by name and/or by role) and organizational
+    elements];
+
+    c. Reviews the incident response plan [Assignment: organization-defined frequency];
+
+    d. Updates the incident response plan to address system/organizational changes
+    or problems encountered during plan implementation, execution, or testing;
+
+    e. Communicates incident response plan changes to [Assignment: organization-defined
+    incident response personnel (identified by name and/or by role) and organizational
+    elements]; and
+
+    f. Protects the incident response plan from unauthorized disclosure and modification.
+    The Incident Response Plan sets forth and documents the actions to be undertaken
+    to address and recover from adverse performance events impacting TACR.
+

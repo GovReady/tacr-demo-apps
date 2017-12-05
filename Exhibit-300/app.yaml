@@ -1,0 +1,56 @@
+id: app
+title: Exhibit 300
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/exhibit-300
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Exhibit 300
+    long: Generates compliance documentation of Exhibit 300 as it pertains to managing
+      the security of CUI (Controlled Unclassified Information) as per NIST 800-53r4
+      controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Exhibit 300 description is not available.
+
+    This application will make sure you are properly using Exhibit 300 to protect
+    CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_SA_2
+  title: NIST 800-53r4 SA-2 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Exhibit 300 to the organization:
+
+    a. Determines information security requirements for the information system or
+    information system service in mission/business process planning;
+
+    b. Determines, documents, and allocates the resources required to protect the
+    information system or information system service as part of its capital planning
+    and investment control process; and
+
+    c. Establishes a discrete line item for information security in organizational
+    programming and budgeting documentation. Exhibit 300 description is not available.
+

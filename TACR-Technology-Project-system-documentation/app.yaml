@@ -1,0 +1,80 @@
+id: app
+title: TACR System system documentation
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-technology-project-system-documentation
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of TACR System system documentation
+    long: Generates compliance documentation of TACR System system documentation
+      as it pertains to managing the security of CUI (Controlled Unclassified Information)
+      as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    TACR System System Documentation description is not available.
+
+    This application will make sure you are properly using TACR System
+    system documentation to protect CUI (Controlled Unclassified Information) as per
+    NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_SA_5
+  title: NIST 800-53r4 SA-5 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses TACR System system documentation to the organization:
+
+    a. Obtains administrator documentation for the information system, system component,
+    or information system service that describes:
+
+    a.1. Secure configuration, installation, and operation of the system, component,
+    or service;
+
+    a.2. Effective use and maintenance of security functions/mechanisms; and
+
+    a.3. Known vulnerabilities regarding configuration and use of administrative (i.e.,
+    privileged) functions;
+
+    b. Obtains user documentation for the information system, system component, or
+    information system service that describes:
+
+    b.1. User-accessible security functions/mechanisms and how to effectively use
+    those security functions/mechanisms;
+
+    b.2. Methods for user interaction, which enables individuals to use the system,
+    component, or service in a more secure manner; and
+
+    b.3. User responsibilities in maintaining the security of the system, component,
+    or service;
+
+    c. Documents attempts to obtain information system, system component, or information
+    system service documentation when such documentation is either unavailable or
+    nonexistent and takes [Assignment: organization-defined actions] in response;
+
+    d. Protects documentation as required, in accordance with the risk management
+    strategy; and
+
+    e. Distributes documentation to [Assignment: organization-defined personnel or
+    roles]. TACR System System Documentation description is not available.
+

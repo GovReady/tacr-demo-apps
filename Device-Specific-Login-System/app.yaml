@@ -1,0 +1,52 @@
+id: app
+title: Device Specific Login System
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/device-specific-login-system
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Device Specific Login System
+    long: Generates compliance documentation of Device Specific Login System as it
+      pertains to managing the security of CUI (Controlled Unclassified Information)
+      as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: "Device Specific Login System is the device's functionality that determines
+    how individuals and other systems authenticate and gain access to the device.
+    \nThis application will make sure you are properly using Device Specific Login
+    System to protect CUI (Controlled Unclassified Information) as per NIST 800-53r4
+    controls."
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_AC_7
+  title: NIST 800-53r4 AC-7 Control Implementation
+  format: markdown
+  template: "{{organization}} uses Device Specific Login System to the information
+    system:\na. Enforces a limit of [Assignment: organization-defined number] consecutive
+    invalid logon attempts by a user during a [Assignment: organization-defined time
+    period]; and\nb. Automatically [Selection: locks the account/node for an [Assignment:
+    organization-defined time period]; locks the account/node until released by an
+    administrator; delays next logon prompt according to [Assignment: organization-defined
+    delay algorithm]] when the maximum number of unsuccessful attempts is exceeded.
+    Device Specific Login System is the device's functionality that determines how
+    individuals and other systems authenticate and gain access to the device. \n\n"

@@ -1,0 +1,182 @@
+id: questions_ctl
+title: Incident Response Plan
+
+questions:
+- id: intro_1
+  title: Introduction Part 1
+  type: interstitial
+  prompt: >+
+    Your Incident Response Plan, or IRP, describes how your organization responds when things go wrong.
+
+    Knowing what your organization will do when things go wrong is considered an important control to keep individual incidents from turning into major disasters. It's knowing how your team puts out small and medium size fires in order to prevent the entire house (or neighborhood) from burning to the ground.
+
+    But you will only know if your plan to keep small fires from becoming big fires works if you practices it.
+
+- id: intro_2
+  title: Introduction Part 2
+  type: interstitial
+  prompt: >+
+    When it comes to IRPs, auditors want to know that 1) you have a written plan, 2) your organization regularly practices and updates the plan, and 3) the plan includes how you meet reporting obligations required by customer contracts or government regulation.
+
+    Auditors consider the following to be "incidents": unauthorized access or getting hacked, loss or corruption of data (intentional or accidental), interruption in a service considered critical to your business or the business of your customers. Any of these events effect the value of your business if not responded to quickly and properly.
+
+    So for the control narrative, we will need to make sure:
+
+      1. You have a written Incident Response Plan
+      2. Your IRP can be easily accessed and used by your teams during an incident
+      3. Employees and staff practice and update the plan regularly
+
+    Get your organization's IRP now if it exists. If you don't have an IRP, we'll help you create one.
+
+# Does the document/plan already exist?
+
+- id: plan_exists
+  title:  Plan exist?
+  prompt: Does your organization have an Incident Response Plan?
+  type: yesno
+
+- id: document_title
+  title:  Plan title?
+  prompt: What is the official title of the Incident Response Plan?
+  type: text
+
+- id: document_location_type
+  title: Location of Plan
+  type: choice
+  choices:
+    - key: url
+      text: URL
+    - key: shared_drive
+      text: Shared drive
+    - key: printed_document
+      text: Printed document
+    - key: other
+      text: Other
+
+# Document location questions
+
+- id: document_url
+  title: Document URL
+  prompt: What is the URL for the Incident Response Plan?
+  type: url
+  ask-first:
+    - document_location_type
+  impute:
+    - condition: document_location_type != 'url'
+      value: ~
+
+- id: document_shared_drive
+  title: Document shared drive path
+  prompt: What is the path or location on the shared drive for the Incident Response Plan?
+  type: text
+  ask-first:
+    - document_location_type
+  impute:
+    - condition: document_location_type != 'shared_drive'
+      value: ~  
+
+- id: document_printed_document
+  title: Printed document location
+  prompt: Describe where the printed Incident Response Plan is kept or filed.
+  type: text
+  ask-first:
+    - document_location_type
+  impute:
+    - condition: document_location_type != 'printed_document'
+      value: ~
+
+- id: document_other
+  title: Other location for document
+  prompt: What is the URL for the Incident Response Plan?
+  type: text
+  ask-first:
+    - document_location_type
+  impute:
+    - condition: document_location_type != 'other'
+      value: ~  
+
+- id: document_other_location
+  title: Other document location
+  prompt: Describe the other location of the Incident Response Plan is kept or filed.
+  type: text
+  ask-first:
+    - document_location_type
+  impute:
+    - condition: document_location_type != 'other'
+      value: ~
+
+# Plan practice and update
+
+- id: next_document_review
+  title: Reviewing the plan
+  type: interstitial
+  prompt: >+
+    Next, let's capture how often your practice and update the plan
+
+- id: pratice_frequency
+  title: Practice frequency
+  prompt: How often does your team practice the Incident Response Plan?
+  type: choice
+  choices:
+    - key: monthly
+      text: monthly
+    - key: quarterly
+      text: quarterly
+    - key: semi-annually
+      text: semi-annually
+    - key: annually
+      text: annually
+    - key: bi-annually
+      text: bi-annually
+
+- id: review_frequency
+  title: Review frequency
+  prompt: How often does your team review and update the Incident Response Plan?
+  type: choice
+  choices:
+    - key: monthly
+      text: monthly
+    - key: quarterly
+      text: quarterly
+    - key: semi-annually
+      text: semi-annually
+    - key: annually
+      text: annually
+    - key: bi-annually
+      text: bi-annually
+
+# Roles
+
+- id: next_who_responsible
+  title: Resonsible role
+  type: interstitial
+  prompt: >+
+    Finally, let's capture how who's responsibility is the Incident Response Plan.
+
+- id: accountable_role_update
+  title: Who's accountable to update plan
+  prompt: Who's accountable to regularly review and update the IRP?
+  type: text
+  help: It is better to put a role, like "CISO", "FSO", "PM" instead of a person's name.
+
+- id: accountable_role_practice
+  title: Who's accountable to practice plan
+  prompt: Who's accountable to regularly practice the IRP?
+  type: text
+  help: It is better to put a role, like "CISO", "FSO", "PM" instead of a person's name.
+
+# Draft summary control
+
+output:
+- id: control_paragraph
+  title: Incident Response Plan Control
+  format: markdown
+  template: >+
+    {{organization}} maintains an Incident Response Plan, titled {{document_title}}, that describes how {{organization}} responds when incidents occur such as unauthorized access of system boundaries, loss or corruption of data (intentional or accidental), and interruption in a service considered critical to {{organization}}'s mission or the business of its customers. {% if document_location_type == "url" %}The IRP is located at a URL ({{document_url}}).{% endif %}
+    {% if document_location_type == "shared_drive" %}The IRP is maintained on a shared drive ({{document_shared_drive}}).{% endif %}
+    {% if document_location_type == "printed_document" %}The IRP is a maintained as a printed document ({{document_printed_document}}).{% endif %}
+    {% if document_location_type == "other" %}The IRP is maintained at the following location: {{document_other_location}}.{% endif %}
+    The Incident Response Plan is practiced {{pratice_frequency}} under the responsiblity of the {{accountable_role_practice}}.
+    The Incident Response Plan is reviewed and updated {{review_frequency}} under the responsiblity of the {{accountable_role_update}}.
+
+  

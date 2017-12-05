@@ -1,0 +1,59 @@
+id: app
+title: NIST SP 800-64
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/nist-sp-800-64
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of NIST SP 800-64
+    long: Generates compliance documentation of NIST SP 800-64 as it pertains to managing
+      the security of CUI (Controlled Unclassified Information) as per NIST 800-53r4
+      controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    NIST SP 800-64  description is not available.
+
+    This application will make sure you are properly using NIST SP 800-64 to protect
+    CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_SA_3
+  title: NIST 800-53r4 SA-3 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses NIST SP 800-64 to the organization:
+
+    a. Manages the information system using [Assignment: organization-defined system
+    development life cycle] that incorporates information security considerations;
+
+    b. Defines and documents information security roles and responsibilities throughout
+    the system development life cycle;
+
+    c. Identifies individuals having information security roles and responsibilities;
+    and
+
+    d. Integrates the organizational information security risk management process
+    into system development life cycle activities. NIST SP 800-64  description is
+    not available.
+

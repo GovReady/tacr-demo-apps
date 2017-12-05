@@ -1,0 +1,184 @@
+id: app
+title: Designated Security Officer
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/designated-security-officer
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Designated Security Officer
+    long: Generates compliance documentation of Designated Security Officer as it
+      pertains to managing the security of CUI (Controlled Unclassified Information)
+      as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    The Designated Security Officer is the individual deputized to have primary responsibility
+    over the security of the information system.
+
+    This application will make sure you are properly using Designated Security Officer
+    to protect CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_AC_13
+  title: NIST 800-53r4 AC-13 Control Implementation
+  format: markdown
+  template: |+
+    {{organization}} uses Designated Security Officer to none The Designated Security Officer is the individual deputized to have primary responsibility over the security of the information system.
+
+- id: ssp_nist80053r4_CP_5
+  title: NIST 800-53r4 CP-5 Control Implementation
+  format: markdown
+  template: |+
+    {{organization}} uses Designated Security Officer to none The Designated Security Officer is the individual deputized to have primary responsibility over the security of the information system.
+
+- id: ssp_nist80053r4_IR_4
+  title: NIST 800-53r4 IR-4 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Designated Security Officer to the organization:
+
+    a. Implements an incident handling capability for security incidents that includes
+    preparation, detection and analysis, containment, eradication, and recovery;
+
+    b. Coordinates incident handling activities with contingency planning activities;
+    and
+
+    c. Incorporates lessons learned from ongoing incident handling activities into
+    incident response procedures, training, and testing, and implements the resulting
+    changes accordingly. The Designated Security Officer is the individual deputized
+    to have primary responsibility over the security of the information system.
+
+- id: ssp_nist80053r4_PL_2
+  title: NIST 800-53r4 PL-2 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Designated Security Officer to the organization:
+
+    a. Develops a security plan for the information system that:
+
+    a.1. Is consistent with the organization�s enterprise architecture;
+
+    a.2. Explicitly defines the authorization boundary for the system;
+
+    a.3. Describes the operational context of the information system in terms of missions
+    and business processes;
+
+    a.4. Provides the security categorization of the information system including
+    supporting rationale;
+
+    a.5. Describes the operational environment for the information system and relationships
+    with or connections to other information systems;
+
+    a.6. Provides an overview of the security requirements for the system;
+
+    a.7. Identifies any relevant overlays, if applicable;
+
+    a.8. Describes the security controls in place or planned for meeting those requirements
+    including a rationale for the tailoring decisions; and
+
+    a.9. Is reviewed and approved by the authorizing official or designated representative
+    prior to plan implementation;
+
+    b. Distributes copies of the security plan and communicates subsequent changes
+    to the plan to [Assignment: organization-defined personnel or roles];
+
+    c. Reviews the security plan for the information system [Assignment: organization-defined
+    frequency];
+
+    d. Updates the plan to address changes to the information system/environment of
+    operation or problems identified during plan implementation or security control
+    assessments; and
+
+    e. Protects the security plan from unauthorized disclosure and modification. The
+    Designated Security Officer is the individual deputized to have primary responsibility
+    over the security of the information system.
+
+- id: ssp_nist80053r4_PL_4
+  title: NIST 800-53r4 PL-4 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Designated Security Officer to the organization:
+
+    a. Establishes and makes readily available to individuals requiring access to
+    the information system, the rules that describe their responsibilities and expected
+    behavior with regard to information and information system usage;
+
+    b. Receives a signed acknowledgment from such individuals, indicating that they
+    have read, understand, and agree to abide by the rules of behavior, before authorizing
+    access to information and the information system;
+
+    c. Reviews and updates the rules of behavior [Assignment: organization-defined
+    frequency]; and
+
+    d. Requires individuals who have signed a previous version of the rules of behavior
+    to read and re-sign when the rules of behavior are revised/updated. The Designated
+    Security Officer is the individual deputized to have primary responsibility over
+    the security of the information system.
+
+- id: ssp_nist80053r4_PS_4
+  title: NIST 800-53r4 PS-4 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Designated Security Officer to the organization, upon termination
+    of individual employment:
+
+    a. Disables information system access within [Assignment: organization-defined
+    time period];
+
+    b. Terminates/revokes any authenticators/credentials associated with the individual;
+
+    c. Conducts exit interviews that include a discussion of [Assignment: organization-defined
+    information security topics];
+
+    d. Retrieves all security-related organizational information system-related property;
+
+    e. Retains access to organizational information and information systems formerly
+    controlled by terminated individual; and
+
+    f. Notifies [Assignment: organization-defined personnel or roles] within [Assignment:
+    organization-defined time period]. The Designated Security Officer is the individual
+    deputized to have primary responsibility over the security of the information
+    system.
+
+- id: ssp_nist80053r4_PS_5
+  title: NIST 800-53r4 PS-5 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Designated Security Officer to the organization:
+
+    a. Reviews and confirms ongoing operational need for current logical and physical
+    access authorizations to information systems/facilities when individuals are reassigned
+    or transferred to other positions within the organization;
+
+    b. Initiates [Assignment: organization-defined transfer or reassignment actions]
+    within [Assignment: organization-defined time period following the formal transfer
+    action];
+
+    c. Modifies access authorization as needed to correspond with any changes in operational
+    need due to reassignment or transfer; and
+
+    d. Notifies [Assignment: organization-defined personnel or roles] within [Assignment:
+    organization-defined time period]. The Designated Security Officer is the individual
+    deputized to have primary responsibility over the security of the information
+    system.
+

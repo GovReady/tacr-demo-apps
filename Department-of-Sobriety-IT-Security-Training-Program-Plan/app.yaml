@@ -1,0 +1,63 @@
+id: app
+title: Department of Sobriety IT Security Training Program Plan
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/department-of-education-it-security-training-program-plan
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: draft
+  version: 0.3
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Department of Sobriety IT Security Training
+      Program Plan
+    long: Generates compliance documentation of Department of Sobriety IT Security
+      Training Program Plan as it pertains to managing the security of CUI (Controlled
+      Unclassified Information) as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Department of Sobriety IT Security Training Program Plan sets forths and documents
+    the Department approach to security training.
+
+    This application will make sure you are properly using Department of Sobriety
+    IT Security Training Program Plan to  NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_AT_2
+  title: NIST 800-53r4 AT-2 Control Implementation
+  format: markdown
+  template: >+
+    The security and awareness training is consistent with Department of Sobriety IT Security Training Program Plan and the guidance in NIST Special Publication 800-50.
+
+- id: ssp_nist80053r4_AT_3
+  title: NIST 800-53r4 AT-3 Control Implementation
+  format: markdown
+  template: >+
+    Role-based security training is consistent with Department of Sobriety IT Security Training Program Plan and the guidance in NIST Special Publication 800-50.
+
+- id: ssp_nist80053r4_AT_4
+  title: NIST 800-53r4 AT-4 Control Implementation
+  format: markdown
+  template: >+
+    The Department documents and monitors all individual information system security training activities including basic security awareness training. New users are required to take security training within 30 days of hire. This information is kept in the appropriate personnel files to verify users have met the training requirements. Training requirement notifications are sent to individuals as deadline for re-training approaches.
+
+    Department of Sobriety IT Security Training Program Plan requires security training records are kept for all individual information system security training activities. The Plan requires security training records are kept in the appropriate personnel files to verify users have met the training requirements.
+
+    Department of Sobriety IT Security Training Program Plan requires new hires are required to take security training within 30 days of hire.

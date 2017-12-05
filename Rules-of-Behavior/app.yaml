@@ -1,0 +1,101 @@
+id: app
+title: Rules of Behavior
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/rules-of-behavior
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: draft
+  version: 0.3
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: Compliance of Rules of Behavior
+    long: Generates compliance documentation of Rules of Behavior as it pertains to
+      managing the security to NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Rules of Behavior document and set forth appropriate activities on an information
+    system.
+
+    This application will make sure you are properly using Rules of Behavior as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_AC_2
+  title: NIST 800-53r4 AC-2 Control Implementation
+  format: markdown
+  template: >+
+    The TACR System Rules of Behavior describes users' responsibilities and expected behavior when using the TACR's computers and applications.
+
+    The Rules of Behavior define that the system administrator,
+    based on need-to-know, assigns the proper permissions to system users.
+
+    The Rules of Behavior define that the employee’s manager
+    approves the access rights before the initial account is created by signing off
+    on the forms.
+
+    All users (privileged and program account users) requesting access to the TACR System system are required to read the TACR System Rules of Behaviors, complete an account request form and sign both documents. User access is controlled by the completion and submission of TACR System System Rules of Behavior and New User Account Request forms by the user and management. These items are completed and submitted whenever a new user requires access or an existing user requires access changes.
+
+    The System Administrator, based on need-to-know, assigns the proper permissions to use TACR' computers and applications.
+
+    The Security Manager maintains completed forms.
+
+    The Security Manager will maintain completed forms.
+
+    The Security Manager will maintain completed forms.
+
+    Completed and signed forms are maintained by the Security Manager.
+
+    The Rules of Behavior are in the appendices and describe the user’s responsibilities and expected behavior when using the application and also includes the User REDACTED form.
+
+    Account management procedures are described in detail in the SSP.
+
+- id: ssp_nist80053r4_AT_2
+  title: NIST 800-53r4 AT-2 Control Implementation
+  format: markdown
+  template: >+
+    The Rules of Behavior of the TACR System require Department personnel and contractor employees involved with the management, operation, programming, maintenance, or use of TACR System system receive training in acceptable computer security practices prior to system access.
+
+- id: ssp_nist80053r4_SA_7
+  title: NIST 800-53r4 SA-7 Control Implementation
+  format: markdown
+  template: |+
+    {{organization}} uses Rules of Behavior to none Rules of Behavior document and set forth appropriate activities on an information system.
+
+- id: ssp_nist80053r4_MP_1
+  title: NIST 800-53r4 MP-1 Control Implementation
+  format: markdown
+  template: >+
+    Media protection policy and procedures are documented in TACR SSP and the TACR System Rules of Behavior. These documents provide the roles and responsibilities for media protection policies and procedures as it pertains to clearing, sanitization, disposal, and storage of media.
+
+- id: ssp_nist80053r4_PL_4
+  title: NIST 800-53r4 PL-4 Control Implementation
+  format: markdown
+  template: >+
+    All users (privileged and program account users) requesting access to the TACR System system are required to read the system's Rules of Behaviors, complete an account request form and sign both documents. The Security Manager will maintain completed forms. The Rules of Behavior, describing the user’s responsibilities and expected behavior when using the application and also includes the User REDACTED form. Account management procedures are described in detail in the SSP. The Rules of Behavior is included in the appendices.
+- id: ssp_nist80053r4_PS_6
+  title: NIST 800-53r4 PS-6 Control Implementation
+  format: markdown
+  template: >+
+    The Department has implemented a formalized process for user account administration using the approved and signed Rules of Behavior and User REDACTED forms. All new users requesting access to the TACR System system must complete these forms and the security manager will keep them on file and reviewed bi-annually.
+- id: ssp_nist80053r4_PS_7
+  title: NIST 800-53r4 PS-7 Control Implementation
+  format: markdown
+  template: >+
+    All contractor support personnel are required to meet the same personnel security policy requirements as Department personnel who have privileged access to the TACR System system. Third party providers are required to review and sign the Rule of Behavior prior to being granted access to the system.

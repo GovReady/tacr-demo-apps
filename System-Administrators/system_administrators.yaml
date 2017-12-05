@@ -1,0 +1,17 @@
+id: system_administrators
+title: System Administrators Module
+
+questions:
+- id: implement_user_accounts
+  title: How do your System Administrators implement user accounts?
+  prompt: How do your System Administrators implement user accounts?
+  type: longtext
+  placeholder: The System Administrators implement user accounts and access rights according to New User Account Request form.
+
+output:
+- format: markdown
+  title: What You Chose
+  template: |
+    How do your System Administrators implement user accounts?
+
+    {{implement_user_accounts}}

@@ -1,0 +1,61 @@
+id: app
+title: Configuration Manager
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/configuration-manager
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Configuration Manager
+    long: Generates compliance documentation of Configuration Manager as it pertains
+      to managing the security of CUI (Controlled Unclassified Information) as per
+      NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    The Configuration Manager is individual on the Department's security team.
+
+    This application will make sure you are properly using Configuration Manager to
+    protect CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_PM_4
+  title: NIST 800-53r4 PM-4 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Configuration Manager to the organization:
+
+    a. Implements a process for ensuring that plans of action and milestones for the
+    security program and associated organizational information systems:
+
+    a.1. Are developed and maintained;
+
+    a.2. Document the remedial information security actions to adequately respond
+    to risk to organizational operations and assets, individuals, other organizations,
+    and the Nation; and
+
+    a.3. Are reported in accordance with OMB FISMA reporting requirements.
+
+    b. Reviews plans of action and milestones for consistency with the organizational
+    risk management strategy and organization-wide priorities for risk response actions.
+    The Configuration Manager is individual on the Department's security team.
+

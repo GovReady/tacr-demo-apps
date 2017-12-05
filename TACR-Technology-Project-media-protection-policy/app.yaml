@@ -1,0 +1,71 @@
+id: app
+title: TACR System media protection policy
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-technology-project-media-protection-policy
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of TACR System media protection
+      policy
+    long: Generates compliance documentation of TACR System media protection
+      policy as it pertains to managing the security of CUI (Controlled Unclassified
+      Information) as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    TACR System Media Protection Policy sets forth and documents the
+    policy and procedures for the secure handling of computer media used in TACR.
+
+    This application will make sure you are properly using TACR System
+    media protection policy to protect CUI (Controlled Unclassified Information) as
+    per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_MP_6
+  title: NIST 800-53r4 MP-6 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses TACR System media protection policy to the
+    organization:
+
+    a. Sanitizes [Assignment: organization-defined information system media] prior
+    to disposal, release out of organizational control, or release for reuse using
+    [Assignment: organization-defined sanitization techniques and procedures] in accordance
+    with applicable federal and organizational standards and policies; and
+
+    b. Employs sanitization mechanisms with the strength and integrity commensurate
+    with the security category or classification of the information. TACR Technology
+    Project Media Protection Policy sets forth and documents the policy and procedures
+    for the secure handling of computer media used in TACR.
+
+- id: ssp_nist80053r4_MP_7
+  title: NIST 800-53r4 MP-7 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses TACR System media protection policy to the
+    organization [Selection: restricts; prohibits] the use of [Assignment: organization-defined
+    types of information system media] on [Assignment: organization-defined information
+    systems or system components] using [Assignment: organization-defined security
+    safeguards]. TACR System Media Protection Policy sets forth and documents
+    the policy and procedures for the secure handling of computer media used in TACR.
+

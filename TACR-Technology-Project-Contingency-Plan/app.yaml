@@ -1,0 +1,99 @@
+id: app
+title: TACR System Contingency Plan
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-technology-project-contingency-plan
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of TACR System Contingency
+      Plan
+    long: Generates compliance documentation of TACR System Contingency
+      Plan as it pertains to managing the security of CUI (Controlled Unclassified
+      Information) as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    The TACR System Contigency Plan sets forth and describes the actions
+    the undertaken to operate TACR when the primary facilities are unavailable.
+
+    This application will make sure you are properly using TACR System
+    Contingency Plan to protect CUI (Controlled Unclassified Information) as per NIST
+    800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_CP_10
+  title: NIST 800-53r4 CP-10 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses TACR System Contingency Plan to the organization
+    provides for the recovery and reconstitution of the information system to a known
+    state after a disruption, compromise, or failure. The TACR System
+    Contigency Plan sets forth and describes the actions the undertaken to operate
+    TACR when the primary facilities are unavailable.
+
+- id: ssp_nist80053r4_CP_2
+  title: NIST 800-53r4 CP-2 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses TACR System Contingency Plan to the organization:
+
+    a. Develops a contingency plan for the information system that:
+
+    a.1. Identifies essential missions and business functions and associated contingency
+    requirements;
+
+    a.2. Provides recovery objectives, restoration priorities, and metrics;
+
+    a.3. Addresses contingency roles, responsibilities, assigned individuals with
+    contact information;
+
+    a.4. Addresses maintaining essential missions and business functions despite an
+    information system disruption, compromise, or failure;
+
+    a.5. Addresses eventual, full information system restoration without deterioration
+    of the security safeguards originally planned and implemented; and
+
+    a.6. Is reviewed and approved by [Assignment: organization-defined personnel or
+    roles];
+
+    b. Distributes copies of the contingency plan to [Assignment: organization-defined
+    key contingency personnel (identified by name and/or by role) and organizational
+    elements];
+
+    c. Coordinates contingency planning activities with incident handling activities;
+
+    d. Reviews the contingency plan for the information system [Assignment: organization-defined
+    frequency];
+
+    e. Updates the contingency plan to address changes to the organization, information
+    system, or environment of operation and problems encountered during contingency
+    plan implementation, execution, or testing;
+
+    f. Communicates contingency plan changes to [Assignment: organization-defined
+    key contingency personnel (identified by name and/or by role) and organizational
+    elements]; and
+
+    g. Protects the contingency plan from unauthorized disclosure and modification.
+    The TACR System Contigency Plan sets forth and describes the actions
+    the undertaken to operate TACR when the primary facilities are unavailable.
+

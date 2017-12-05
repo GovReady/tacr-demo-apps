@@ -1,0 +1,81 @@
+id: app
+title: FIPS 199 and NIST SP 800-60
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/fips-199-and-nist-sp-800-60
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of FIPS 199 and NIST SP 800-60
+    long: Generates compliance documentation of FIPS 199 and NIST SP 800-60 as it
+      pertains to managing the security of CUI (Controlled Unclassified Information)
+      as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    FIPS 199 and NIST SP 800-60 description is not available.
+
+    This application will make sure you are properly using FIPS 199 and NIST SP 800-60
+    to protect CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_RA_2
+  title: NIST 800-53r4 RA-2 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses FIPS 199 and NIST SP 800-60 to the organization:
+
+    a. Categorizes information and the information system in accordance with applicable
+    federal laws, Executive Orders, directives, policies, regulations, standards,
+    and guidance;
+
+    b. Documents the security categorization results (including supporting rationale)
+    in the security plan for the information system; and
+
+    c. Ensures that the authorizing official or authorizing official designated representative
+    reviews and approves the security categorization decision. FIPS 199 and NIST SP
+    800-60 description is not available.
+
+- id: ssp_nist80053r4_RA_3
+  title: NIST 800-53r4 RA-3 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses FIPS 199 and NIST SP 800-60 to the organization:
+
+    a. Conducts an assessment of risk, including the likelihood and magnitude of harm,
+    from the unauthorized access, use, disclosure, disruption, modification, or destruction
+    of the information system and the information it processes, stores, or transmits;
+
+    b. Documents risk assessment results in [Selection: security plan; risk assessment
+    report; [Assignment: organization-defined document]];
+
+    c. Reviews risk assessment results [Assignment: organization-defined frequency];
+
+    d. Disseminates risk assessment results to [Assignment: organization-defined personnel
+    or roles]; and
+
+    e. Updates the risk assessment [Assignment: organization-defined frequency] or
+    whenever there are significant changes to the information system or environment
+    of operation (including the identification of new threats and vulnerabilities),
+    or other conditions that may impact the security state of the system. FIPS 199
+    and NIST SP 800-60 description is not available.
+

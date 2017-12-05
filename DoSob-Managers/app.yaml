@@ -1,0 +1,85 @@
+id: app
+title: DoSob Managers
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/dosob-managers
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of DoSob Managers
+    long: Generates compliance documentation of DoSob Managers as it pertains to managing
+      the security of CUI (Controlled Unclassified Information) as per NIST 800-53r4
+      controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    DoSob Managers are individuals responsible for supervising programs.
+
+    This application will make sure you are properly using DoSob Managers to protect
+    CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_PS_4
+  title: NIST 800-53r4 PS-4 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses DoSob Managers to the organization, upon termination of individual
+    employment:
+
+    a. Disables information system access within [Assignment: organization-defined
+    time period];
+
+    b. Terminates/revokes any authenticators/credentials associated with the individual;
+
+    c. Conducts exit interviews that include a discussion of [Assignment: organization-defined
+    information security topics];
+
+    d. Retrieves all security-related organizational information system-related property;
+
+    e. Retains access to organizational information and information systems formerly
+    controlled by terminated individual; and
+
+    f. Notifies [Assignment: organization-defined personnel or roles] within [Assignment:
+    organization-defined time period]. DoSob Managers are individuals responsible for
+    supervising programs.
+
+- id: ssp_nist80053r4_PS_5
+  title: NIST 800-53r4 PS-5 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses DoSob Managers to the organization:
+
+    a. Reviews and confirms ongoing operational need for current logical and physical
+    access authorizations to information systems/facilities when individuals are reassigned
+    or transferred to other positions within the organization;
+
+    b. Initiates [Assignment: organization-defined transfer or reassignment actions]
+    within [Assignment: organization-defined time period following the formal transfer
+    action];
+
+    c. Modifies access authorization as needed to correspond with any changes in operational
+    need due to reassignment or transfer; and
+
+    d. Notifies [Assignment: organization-defined personnel or roles] within [Assignment:
+    organization-defined time period]. DoSob Managers are individuals responsible for
+    supervising programs.
+

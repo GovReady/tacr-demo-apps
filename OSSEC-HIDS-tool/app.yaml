@@ -1,0 +1,98 @@
+id: app
+title: OSSEC-HIDS tool
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/ossec-hids-tool
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of OSSEC-HIDS tool
+    long: Generates compliance documentation of OSSEC-HIDS tool as it pertains to
+      managing the security of CUI (Controlled Unclassified Information) as per NIST
+      800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    OSSEC-HIDS is an intrusion detection service to prevent information system compromise.
+
+    This application will make sure you are properly using OSSEC-HIDS tool to protect
+    CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_IR_4
+  title: NIST 800-53r4 IR-4 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses OSSEC-HIDS tool to the organization:
+
+    a. Implements an incident handling capability for security incidents that includes
+    preparation, detection and analysis, containment, eradication, and recovery;
+
+    b. Coordinates incident handling activities with contingency planning activities;
+    and
+
+    c. Incorporates lessons learned from ongoing incident handling activities into
+    incident response procedures, training, and testing, and implements the resulting
+    changes accordingly. OSSEC-HIDS is an intrusion detection service to prevent information
+    system compromise.
+
+- id: ssp_nist80053r4_SI_4
+  title: NIST 800-53r4 SI-4 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses OSSEC-HIDS tool to the organization:
+
+    a. Monitors the information system to detect:
+
+    a.1. Attacks and indicators of potential attacks in accordance with [Assignment:
+    organization-defined monitoring objectives]; and
+
+    a.2. Unauthorized local, network, and remote connections;
+
+    b. Identifies unauthorized use of the information system through [Assignment:
+    organization-defined techniques and methods];
+
+    c. Deploys monitoring devices:
+
+    c.1. Strategically within the information system to collect organization-determined
+    essential information; and
+
+    c.2. At ad hoc locations within the system to track specific types of transactions
+    of interest to the organization;
+
+    d. Protects information obtained from intrusion-monitoring tools from unauthorized
+    access, modification, and deletion;
+
+    e. Heightens the level of information system monitoring activity whenever there
+    is an indication of increased risk to organizational operations and assets, individuals,
+    other organizations, or the Nation based on law enforcement information, intelligence
+    information, or other credible sources of information;
+
+    f. Obtains legal opinion with regard to information system monitoring activities
+    in accordance with applicable federal laws, Executive Orders, directives, policies,
+    or regulations; and
+
+    g. Provides [Assignment: organization-defined information system monitoring information]
+    to [Assignment: organization-defined personnel or roles] [Selection (one or more):
+    as needed; [Assignment: organization-defined frequency]]. OSSEC-HIDS is an intrusion
+    detection service to prevent information system compromise.
+

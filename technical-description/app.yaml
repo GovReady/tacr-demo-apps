@@ -1,0 +1,92 @@
+id: app
+title: TACR Technical Description
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/ssp-text
+- govready.com/apps/compliance/2017/tacr-technical-description
+version: 0.5
+icon: app.png
+catalog:
+  category: Description
+  vendor: ContractorCo
+  vendor_url: http://www.ContractorCo.com
+  status: draft
+  version: 0.3
+  source_url: https://github.com/GovReady/ssp-via-govready/tree/master/out/generic/technical-description
+  description:
+    short: Technical description for TACR
+    long: Generates the technical description for TACR
+
+introduction:
+  format: markdown
+  template: >-
+    Technical description for TACR
+
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+
+output:
+- id: technical_description
+  title: TACR Technical Description
+  format: markdown
+  template: >+
+    # Technical Description
+
+    This section describes the technical characteristics of the TACR System, including: network architecture, data flow, and system ports, protocols and services.
+
+    ## Network Architecture and Data Flow
+
+    The logical network topology is shown in the Network Diagram mapping the data flow between components. The following figure provides a visual depiction of the system network components that constitute the TACR System.
+
+
+    ![TACR Security Boundary Diagram v1.3](blank.md)
+
+    
+    Network Diagram Notes:
+
+
+      * All systems are housed in a Virtual Private Cloud (VPC) in the FedRAMP certified us-east (N/ Virginia) region of the Amazon Web Services (AWS) Cloud
+      * All systems are accessible from the public internet via ports 80 and 443 (web servers will redirect port 80 to port 443)
+      * ContractorCo System Administrators on whitelisted IPs have access to all systems on port 22 (SSH) and CPM via port 443
+      * All inter-site communications, such as with SILK, Auth, Analytics, CPM (backups), Cobbler (puppet) and SMTP (mail) communicate via an VPC internal private network (`192.168.0.0/16`).
+
+
+    **System Interconnection/Information Sharing**
+
+
+    The TACR System system does not connect to any other agency system nor does it contain or share any type of sensitive PII data or other High Value Assets (HVA). The general public can read the TACR web pages, search the sobriety resources database, and can sign-up for specified discussion lists via the Internet. Since TACR System has no other connectivity, no interconnection documents have been generated.
+
+    ## Ports, Protocols, Services and Network Security Groups
+
+    The TACR instances are encapsulated within an AWS *Virtual Private Cloud* (VPC) that provides a private and isolated IP address range within the `192.168.0.0/16` address space. This enables the instances to communicate with each other without concern of external eavedropping.
+
+    Within the VPC a set of AWS *Security Groups* are defined and applied to specific instances as required. Security groups have been defined for web, ssh, and specific contractor access.
+
+
+    **Table SE-1**, *TACR System: Ports, Protocols and Services*, illustrates the open ports and protocols that are allowed from the outside to the inside by specifying the destination, ports, and origin of allowed traffic.
+
+
+    <table>
+      <thead>
+        <tr><td>Security Group                             </td><td> Ports   </td><td> Services[1]   </td><td> Purpose            </td><td> Used By             </td><tr>
+      </thead>
+      <tbody>
+        <tr><td>tacr_production_web                       </td><td> 80, 443 </td><td> HTTP, HTTPS   </td><td> general web access </td><td> TACR users         </td><tr>
+        <tr><td>tacr_production_mail                      </td><td> 25      </td><td> SMTP          </td><td> mailer access      </td><td> TACR users         </td><tr>
+        <tr><td>tacr_production_https_whitelist           </td><td> 443     </td><td> HTTPS         </td><td> CPM backup access  </td><td> ContractorCo admins </td><tr>
+        <tr><td>tacr_production_ssh_whitelist             </td><td> 22      </td><td> SSH           </td><td> SSH access         </td><td> ContractorCo admins </td><tr>
+        <tr><td>tacr_production_ssh_whitelist     </td><td> 22      </td><td> SSH           </td><td> access     </td><td> GSMX developers      </td><tr>
+        <tr><td>tacr_production_rdp_REDACTED_whitelist </td><td> 3389    </td><td> RDP (TCP/UDP) </td><td> REDACTED access </td><td> GSMX maintainers     </td><tr>
+      </tbody>
+    </table>
+    - [1] Except where explicitly stated, all available services use TCP protocol.
+
+    Notes on privileged access:
+
+      * ContractorCo admins have SSH access from restricted IPs to all instances.
+      * GSMX developers have SSH access from restricted IPs to *REDACTED*.
+      * GSMX maintainers have Remote Desktop (RDP) access from restricted IPs to *REDACTED*.

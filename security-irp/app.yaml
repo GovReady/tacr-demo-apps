@@ -1,0 +1,42 @@
+id: app
+title: TACR Security IRP
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-ssp-text
+- govready.com/apps/compliance/2017/security-irp
+version: 0.5
+icon: app.png
+catalog:
+  category: Description
+  vendor: ContractorCo
+  vendor_url: http://www.ContractorCo.com
+  status: draft
+  version: 0.3
+  source_url: https://github.com/GovReady/ssp-via-govready/tree/master/out/generic/security-irp
+  description:
+    short: System security IRP for TACR
+    long: Generates the system security IRP for TACR
+
+introduction:
+  format: markdown
+  template: >-
+    Generates the system security IRP for TACR
+questions:
+- id: questions_ctl
+  title: Questions Control
+  type: module
+  module-id: questions_ctl
+output:
+- id: security_irp
+  title: Security IRP
+  format: markdown
+  template: >+
+    # TACR Security Incident Response Procedures
+
+    This document outlines the ContractorCo Incident Response Team's process for responding to TACR security incidents and other system disruptions. It outlines roles and responsibilities during and after incidents, and it lays out the steps we'll take to resolve them.
+
+    *If you're responding to an incident, [here's an IRP checklist](blank.md) as a short, actionable companion to this guide.*
+
+    
+    REDACTED

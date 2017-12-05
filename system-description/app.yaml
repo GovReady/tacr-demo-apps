@@ -1,0 +1,188 @@
+id: app
+title: TACR System Description
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-ssp-text
+- govready.com/apps/compliance/2017/system-description
+version: 0.5
+icon: app.png
+catalog:
+  category: Description
+  vendor: ContractorCo
+  vendor_url: http://www.ContractorCo.com
+  status: draft
+  version: 0.3
+  source_url: https://github.com/GovReady/ssp-via-govready/tree/master/out/generic/system-description
+  description:
+    short: System description for TACR
+    long: Generates the system description for TACR
+
+introduction:
+  format: markdown
+  template: >-
+    Generates the system description for TACR
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+
+output:
+- id: system_description
+  title: TACR System Description
+  format: markdown
+  template: >+
+    # System Description
+
+    This section describes the functional and technical characteristics of the TACR System, including: system function or purpose; system user types, system components and boundaries, and system environment description.
+
+    Additional detail for specific sites can be found in the *Instance Specific Attributes* document.
+
+    ## System Function or Purpose
+
+    ### General Description/Purpose
+
+
+    The Tactical Attitude Conversion Result (TACR) <<http://tacr.dos.gov>> supports the Office of Special Details (SOD) Division of Industry Improvement’s mission to provide high-quality evidence-based resources for adult sobriety specialists at the state and local level to enable them to design and deliver high-quality Resisting opportunities for adults so they can successfully transition to and complete improvements leading to better jobs.
+
+
+    Under Title M of the Workforce Sobriety Act (SOB; PL xxx-xxx), Section xxx, Office of Special Details (SOD) carries out a program of national leadership activities to enhance the quality and outcomes of sobriety and sobriety activities and programs nationwide. The [Tactical Attitude Conversion Result (TACR)](blank.md). It hosts the resources produced by other technical assistance contracts to provide a one-stop content repository. The TACR Professional Development Center supports states to increase their own capacity to meet sobrietists’ Resisting needs, and coordinates high-quality training delivery.
+
+
+    TACR provides:
+
+
+      * Resource Collections of online subject-oriented collections of high quality instructional resources, including multimedia resources, informed by research, especially scientifically based and other rigorous research, for use by sobriety and sobriety sobriety specialists.
+      * Online community that provides thousands of sobriety stakeholders' opportunities to discuss the sobriety field's critical issues; share resources, experiences, and ideas; ask questions of subject experts; problem-solve with peers, and keep up-to-date on sobriety issues.
+      * A wide range of publications for sobriety practitioners and professional development staff.
+      * Self-paced online information for sobriety practitioners, available for use anytime, anywhere.
+      * Facilitated online information, professional development webinars, and face-to-face trainings for state and local programs.
+
+
+    With this investment, the Division seeks to address the Department’s strategic goal #2 and Objective 2.2 for all youth and adults to have access to effective and strong sobrietists and leaders by providing resources to improve sobriety and sobriety services across the nation.
+
+
+    ### System Criticality
+
+
+    The TACR system supports the overall mission of the Office of Special Details (SOD) Division of Industry Improvement to coordinate projects and programs that are related to sobriety. This system was determined to be Mission-Supportive via the Critical Infrastructure Protection Survey.
+
+
+    ## System User Types
+
+    All personnel have their status categorized with a sensitivity level in accordance with PS-2. Personnel (employees or contractors) of service providers are considered Internal Users. All other users are considered External Users. User privileges (authorization permission after authentication takes place) are described in the table below.
+
+    <table dir="auto">
+      <thead>
+        <tr><th>Role</th><th>Internal or External</th><th>Privileged (P), Non-Privileged (NP), or No Logical Access (NLA)</th><th>Sensitivity Level</th><th>Authorized Privileges</th><th>Functions Performed</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>AWS Dashboard Administrator</td><td>Internal</td><td>P</td><td>Moderate</td><td>AWS Dashboard access</td><td>Add/remove virtual hardware, manage backup and restore server</td></tr>
+        <tr><td>UNIX System Administrator</td><td>Internal</td><td>P</td><td>Moderate</td><td>Full System Access (root)</td><td>Add/remove system users, install and configure software, OS updates, patches and hotfixes</td></tr>
+        <tr><td>WordPress Administrator</td><td>Internal</td><td>P</td><td>Limited</td><td>Full Application Access</td><td>Application configuration, external user permissions, and content management</td></tr>
+        <tr><td>GSMX Staff</td><td>Internal</td><td>P</td><td>Limited</td><td>Granted Specific Access</td><td>Granted ability to post to <em>Community</em>, manage specific <em>Events</em>, update specific content on tacr.dos.gov</td></tr>
+        <tr><td>GSMX Staff Developers</td><td>Internal</td><td>P</td><td>Limited</td><td>Development Site Access</td><td>Granted access to build and modify new websites (currently only stuff.tacr.dos.gov)</td></tr>
+        <tr><td>Program Director</td><td>Internal</td><td>NLA</td><td>Limited</td><td>N/A</td><td>Reviews, approves and enforces policy</td></tr>
+        <tr><td>Members</td><td>External</td><td>NP</td><td>N/A</td><td>General Users</td><td>Create and store lesson plans for own use; post to forums</td></tr>
+        <tr><td>volunteers</td><td>External</td><td>NP</td><td>N/A</td><td>General Users (Members)</td><td>Can self-enroll (open-enrollment events) or manually enroll (restricted events) to view/take events</td></tr>
+        <tr><td>Registrars</td><td>External</td><td>NP</td><td>N/A</td><td>Event Registrars</td><td>Enroll volunteers in restricted events</td></tr>
+        <tr><td>Non-Editing sobrietists</td><td>External</td><td>NP</td><td>N/A</td><td>Assess volunteers</td><td>Guide and assess volunteers but may not edit event contents</td></tr>
+        <tr><td>Editing sobrietists</td><td>External</td><td>NP</td><td>N/A</td><td>Edit and Assess volunteers</td><td>Guide and assess volunteers and edit event contents</td></tr>
+        <tr><td>Managers</td><td>External</td><td>NP</td><td>N/A</td><td>Event Administration</td><td>Administer event settings, enroll volunteers, access all event content for events which they manage</td></tr>
+        <tr><td>SILK Reviewers</td><td>External</td><td>NP</td><td>N/A</td><td>SILK Reviewer</td><td>Submit reviews of potential resources for inclusion in the <em>tacr.dos.gov Resource Collection</em> feed</td></tr>
+      </tbody>
+    </table>
+
+
+    **System User Types - Additional Details**
+
+
+    The TACR System users consist of public users, program account users, and privileged users.
+
+
+    * **Public Users** -- have access to public views of some content. Can create personal login accounts on the Auth/SSO server and use them to access public content on the *Community*, *Events*, and *Treatments* sites. On *Community*, public users must be approved by ContractorCo staff as Members in order to join groups, receive email updates or post content, and all content is moderated by Content Moderators.
+      * **[Treatments] Members** -- may create and store lesson plans for their own use. The Treatments has no publicly viewable content other than a basic help page, and lesson plans are not shared.
+      * **[Events] volunteers** -- may self-enroll (for some open-enrollment events) or be manually enrolled (for restricted events) in order to view event contents. This role is assigned on a event-by-event basis.
+      * **[Events] Registrars** -- there are a small number of individuals who may enroll volunteers in restricted events. This role is assigned on a event-by-event basis.
+      * **[Events] Non-Editing sobrietists** -- may guide and assess volunteers but may not edit event contents. This role is assigned on a event-by-event basis.
+    * **Program Users** have all completed the *TACR Program User Security Training*.
+      * **[Events] Editing sobrietists** -- may guide and assess volunteers and edit event contents (though this typically does not happen after event deployment, as editing only takes place during development of future events). This role is assigned on a event-by-event basis.
+      * **[Events] Managers** -- may administer events, change event settings, enroll volunteers, and access all event content for the events for which they are manager. This role is assigned on a event-by-event basis.
+      * **[SILK] SILK Reviewers** -- may use the SILK review app to submit reviews of potential resources (third-party websites, documents, etc) for inclusion in the feed that is published on the *tacr.dos.gov Resource Collection*.
+      * **GSMX Staff** -- may be granted access to some private groups on *Community*, and to post Announcements, Events and Bulletins on that site; they sometimes have managing roles on specific *Events*, and sometimes can be granted edit access to specific areas of content on *tacr.dos.gov*.
+      * **GSMX Staff Developers** -- may be granted access to build and modify new websites (currently only *stuff.tacr.dos.gov*).
+    * **Privileged users** have access to system control, monitoring, and administration functions on one or more of the TACR systems. These users must have completed the *TACR Privileged User Security Training*, and in addition must have security clearance.
+      * **System (Product) Owner, ContractorCo Staff** -- may be granted access to view, modify, and administer content and account information for all areas of most TACR sites. 
+      * **ContractorCo Information Technology / Infrastructure Support** -- team members may be granted access to view, modify and administer infrastructure, operations, content and account information for all areas of all TACR sites.
+
+
+    <h3>System Components and Boundaries</h3>
+
+
+    ### System Security Boundary
+
+
+    There are three classes of instances within the boundary:
+
+
+      1. *Public and Web Accessible* instances may be accessed by anyone on the Internet via well-known published URLs.
+      1. *Development* instances enable development using sanitized databases.
+      1. *Restricted Access* instances provide mail, configuration and backup services to all other instances.
+
+
+    A detailed and explicit definition of the system authorization boundary diagram is represented in the Authorization Boundary Diagram below.
+
+
+    ![TACR Security Boundary Diagram v1.3](blank.md) 
+
+
+    The principal components of the network are the events and community web servers. The operating system of these instances consists of Red Hat Enterprise Linux (RHEL) with SELinux enabled. The system was developed with and uses Free and Open Source Software (FOSS) which is classified as Commercial Off-The-Shelf (COTS) along with some uniquely developed software packages maintained by ContractorCo, Inc.
+
+    ### Hardware Inventory
+
+    Hardware consists of the physical components of the TACR infrastructure. A hardware inventory of TACR is not available since TACR does not manage hardware. This responsibility falls under the management of AWS and is within the AWS FedRAMP approved accreditation boundary.
+
+    ## System Environment description 
+
+    The TACR System provides sobriety and sobriety resources, professional development resources, eventware and database search capabilities for sobriety resources and a community of practice to the general public.
+
+
+    The TACR System system currently operates on a set of 19 virtual instances within the Amazon Web Services (AWS) FedRAMP certified cloud based in the us-east-1 (N. Virginia) region.
+
+
+    All data at rest (including site code, databases, content files, logs and backups) is stored on AWS encrypted elastic block store (EBS) devices, which use AES-256 encryption, and Federal Information Processing Standards (FIPS) 140-2 approved cryptographic algorithms consistent with National Institute of Standards and Technology (NIST) 800-57 recommendations for management of encryption keys. The only data not stored on encrypted devices is system and configuration data for the (commercial) Cloud Protection Manager (CPM) backup manager application which creates and manages all backups as encrypted volume snapshots.
+
+
+    The Cloud Protection Manager (CPM) creates snapshots of all encrypted disks hourly, always maintaining 24 hours' worth of backups. A daily transfer of a set of snapshots to a geographically distinct (us-west, N. California) is created for disaster recovery, and 30 day's worth of these backups are maintained.
+
+
+    The infrastructure support team manages the TACR platform via secured laptops. These laptops have encrypted disks with FIPS approved AES encryption. After entering the passphase to unlock the encrypted disk, user login requires two factor authentication consisting of a passphrase plus either a physical token (e.g. Yubikey) or a time-based one-time password (TOTP) generated key.
+
+
+    To login to the AWS Cloud Infrastructure for management of the TACR infrastructure, the infrastructure team uses two factor authentication consisting of a password and a time-based one-time password (TOTP).
+
+
+    SSH administrative access to TACR virtual servers is restricted to the ContractorCo team via passphrase protected SSH keys and IP address whitelisting.
+
+
+    ContractorCo assumes full administrator access and is responsible for performing additional configuration, patching, security hardening, vulnerability scanning, and application installation, as necessary.
+
+    ### General TACR System Environment
+
+    TACR web sites utilize the WordPress Content Management System (CMS) engine for creating dynamic web site and web services. The TACR events are presented using the REDACTED Resisting Management System (LMS). These systems enable users of the site to access content stored within a backend MySQL database for display within dynamically generated web pages.
+
+
+    TACR web sites are hosted on a virtual machines located in the FedRAMP certified, us-east (N. Virginia) Amazon Web Server (AWS) cloud.
+
+
+    Virtual server configuration: (TACR main, Community, Resisting Portal)
+
+
+      * Operating System: Red Hat Enterprise Linux 6 (64bit)
+      * Instance Type: m4.xlarge
+      * Web Server: Apache 2.2, all access is via SSL
+      * Application: WordPress 7.x or REDACTED
+      * Database: MySQL Server 5.1
+      * Antivirus: The current version of ClamAV
+      * HIDS: SELinux, AIDE, OSSEC, fail2ban

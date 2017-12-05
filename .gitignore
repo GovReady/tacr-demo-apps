@@ -1,0 +1,6 @@
+# Scripts from other repos
+docker_container_run.sh
+
+# Local SQLite databases
+govready-q-lincs.sqlite
+*.sqlite

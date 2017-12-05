@@ -1,0 +1,289 @@
+id: app
+title: DoSob Handbook –01
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/dosob-handbook--01
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: draft
+  version: 0.3.1
+  source_url: https://git.ContractorCo.net/tacr/ssp-via-govready/tree/master/apps/app_stubs/dosob/dosob-Handbook--01
+  description:
+    short: (NIST 800-53r4) Compliance of DoSob Handbook –01
+    long: Generates compliance documentation of DoSob Handbook –01 as it pertains
+      to managing NIST 800-53r4 controls.
+introduction:
+  format: markdown
+  template: "Department of Sobriety Handbook XX documents and sets forth the
+    Department Information Assurance (IA) Security Policy as per NIST 800-53r4 controls."
+
+questions:
+- id: questions
+  title: Questions
+  type: module
+  module-id: questions
+
+output:
+- id: ssp_nist80053r4_AC_1
+  title: NIST 800-53r4 AC-1 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization:\na.
+    Develops, documents, and disseminates to [Assignment: organization-defined personnel
+    or roles]:\na.1. An access control policy that addresses purpose, scope, roles,
+    responsibilities, management commitment, coordination among organizational entities,
+    and compliance; and\na.2. Procedures to facilitate the implementation of the access
+    control policy and associated access controls; and\nb. Reviews and updates the
+    current:\nb.1. Access control policy [Assignment: organization-defined frequency];
+    and\nb.2. Access control procedures [Assignment: organization-defined frequency].
+    Department of Sobriety Handbook XX documents and sets forth the Department
+    Information Assurance (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_AC_20
+  title: NIST 800-53r4 AC-20 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization establishes
+    terms and conditions, consistent with any trust relationships established with
+    other organizations owning, operating, and/or maintaining external information
+    systems, allowing authorized individuals to:\na. Access the information system
+    from external information systems; and\nb. Process, store, or transmit organization-controlled
+    information using external information systems. Department of Sobriety Handbook
+    -01 documents and sets forth the Department Information Assurance (IA) Security
+    Policy.  \n\n"
+- id: ssp_nist80053r4_AT_1
+  title: NIST 800-53r4 AT-1 Control Implementation
+  format: markdown
+  template: >+
+    {{questions.output_documents.ssp_nist80053r4_AT_1|safe}}
+
+- id: ssp_nist80053r4_AT_3
+  title: NIST 800-53r4 AT-3 Control Implementation
+  format: markdown
+  template: >+
+    {{questions.output_documents.ssp_nist80053r4_AT_3|safe}}
+
+- id: ssp_nist80053r4_CA_6
+  title: NIST 800-53r4 CA-6 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization:\na.
+    Assigns a senior-level executive or manager as the authorizing official for the
+    information system;\nb. Ensures that the authorizing official authorizes the information
+    system for processing before commencing operations; and\nc. Updates the security
+    authorization [Assignment: organization-defined frequency]. Department of Sobriety
+    Handbook XX documents and sets forth the Department Information Assurance
+    (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_CM_1
+  title: NIST 800-53r4 CM-1 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization:\na.
+    Develops, documents, and disseminates to [Assignment: organization-defined personnel
+    or roles]:\na.1. A configuration management policy that addresses purpose, scope,
+    roles, responsibilities, management commitment, coordination among organizational
+    entities, and compliance; and\na.2. Procedures to facilitate the implementation
+    of the configuration management policy and associated configuration management
+    controls; and\nb. Reviews and updates the current:\nb.1. Configuration management
+    policy [Assignment: organization-defined frequency]; and\nb.2. Configuration management
+    procedures [Assignment: organization-defined frequency]. Department of Sobriety
+    Handbook XX documents and sets forth the Department Information Assurance
+    (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_CP_1
+  title: NIST 800-53r4 CP-1 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization:\na.
+    Develops, documents, and disseminates to [Assignment: organization-defined personnel
+    or roles]:\na.1. A contingency planning policy that addresses purpose, scope,
+    roles, responsibilities, management commitment, coordination among organizational
+    entities, and compliance; and\na.2. Procedures to facilitate the implementation
+    of the contingency planning policy and associated contingency planning controls;
+    and\nb. Reviews and updates the current:\nb.1. Contingency planning policy [Assignment:
+    organization-defined frequency]; and\nb.2. Contingency planning procedures [Assignment:
+    organization-defined frequency]. Department of Sobriety Handbook XX documents
+    and sets forth the Department Information Assurance (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_IR_1
+  title: NIST 800-53r4 IR-1 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization:\na.
+    Develops, documents, and disseminates to [Assignment: organization-defined personnel
+    or roles]:\na.1. An incident response policy that addresses purpose, scope, roles,
+    responsibilities, management commitment, coordination among organizational entities,
+    and compliance; and\na.2. Procedures to facilitate the implementation of the incident
+    response policy and associated incident response controls; and\nb. Reviews and
+    updates the current:\nb.1. Incident response policy [Assignment: organization-defined
+    frequency]; and\nb.2. Incident response procedures [Assignment: organization-defined
+    frequency]. Department of Sobriety Handbook XX documents and sets forth
+    the Department Information Assurance (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_MA_1
+  title: NIST 800-53r4 MA-1 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization:\na.
+    Develops, documents, and disseminates to [Assignment: organization-defined personnel
+    or roles]:\na.1. A system maintenance policy that addresses purpose, scope, roles,
+    responsibilities, management commitment, coordination among organizational entities,
+    and compliance; and\na.2. Procedures to facilitate the implementation of the system
+    maintenance policy and associated system maintenance controls; and\nb. Reviews
+    and updates the current:\nb.1. System maintenance policy [Assignment: organization-defined
+    frequency]; and\nb.2. System maintenance procedures [Assignment: organization-defined
+    frequency]. Department of Sobriety Handbook XX documents and sets forth
+    the Department Information Assurance (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_MP_1
+  title: NIST 800-53r4 MP-1 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization:\na.
+    Develops, documents, and disseminates to [Assignment: organization-defined personnel
+    or roles]:\na.1. A media protection policy that addresses purpose, scope, roles,
+    responsibilities, management commitment, coordination among organizational entities,
+    and compliance; and\na.2. Procedures to facilitate the implementation of the media
+    protection policy and associated media protection controls; and\nb. Reviews and
+    updates the current:\nb.1. Media protection policy [Assignment: organization-defined
+    frequency]; and\nb.2. Media protection procedures [Assignment: organization-defined
+    frequency]. Department of Sobriety Handbook XX documents and sets forth
+    the Department Information Assurance (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_PL_1
+  title: NIST 800-53r4 PL-1 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization:\na.
+    Develops, documents, and disseminates to [Assignment: organization-defined personnel
+    or roles]:\na.1. A security planning policy that addresses purpose, scope, roles,
+    responsibilities, management commitment, coordination among organizational entities,
+    and compliance; and\na.2. Procedures to facilitate the implementation of the security
+    planning policy and associated security planning controls; and\nb. Reviews and
+    updates the current:\nb.1. Security planning policy [Assignment: organization-defined
+    frequency]; and\nb.2. Security planning procedures [Assignment: organization-defined
+    frequency]. Department of Sobriety Handbook XX documents and sets forth
+    the Department Information Assurance (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_PL_2
+  title: NIST 800-53r4 PL-2 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization:\na.
+    Develops a security plan for the information system that:\na.1. Is consistent
+    with the organization�s enterprise architecture;\na.2. Explicitly defines the
+    authorization boundary for the system;\na.3. Describes the operational context
+    of the information system in terms of missions and business processes;\na.4. Provides
+    the security categorization of the information system including supporting rationale;\na.5.
+    Describes the operational environment for the information system and relationships
+    with or connections to other information systems;\na.6. Provides an overview of
+    the security requirements for the system;\na.7. Identifies any relevant overlays,
+    if applicable;\na.8. Describes the security controls in place or planned for meeting
+    those requirements including a rationale for the tailoring decisions; and\na.9.
+    Is reviewed and approved by the authorizing official or designated representative
+    prior to plan implementation;\nb. Distributes copies of the security plan and
+    communicates subsequent changes to the plan to [Assignment: organization-defined
+    personnel or roles];\nc. Reviews the security plan for the information system
+    [Assignment: organization-defined frequency];\nd. Updates the plan to address
+    changes to the information system/environment of operation or problems identified
+    during plan implementation or security control assessments; and\ne. Protects the
+    security plan from unauthorized disclosure and modification. Department of Sobriety
+    Handbook XX documents and sets forth the Department Information Assurance
+    (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_PM_1
+  title: NIST 800-53r4 PM-1 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization:\na.
+    Develops and disseminates an organization-wide information security program plan
+    that:\na.1. Provides an overview of the requirements for the security program
+    and a description of the security program management controls and common controls
+    in place or planned for meeting those requirements;\na.2. Includes the identification
+    and assignment of roles, responsibilities, management commitment, coordination
+    among organizational entities, and compliance;\na.3. Reflects coordination among
+    organizational entities responsible for the different aspects of information security
+    (i.e., technical, physical, personnel, cyber-physical); and\na.4. Is approved
+    by a senior official with responsibility and accountability for the risk being
+    incurred to organizational operations (including mission, functions, image, and
+    reputation), organizational assets, individuals, other organizations, and the
+    Nation;\nb. Reviews the organization-wide information security program plan [Assignment:
+    organization-defined frequency];\nc. Updates the plan to address organizational
+    changes and problems identified during plan implementation or security control
+    assessments; and\nd. Protects the information security program plan from unauthorized
+    disclosure and modification. Department of Sobriety Handbook XX documents
+    and sets forth the Department Information Assurance (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_PM_10
+  title: NIST 800-53r4 PM-10 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization:\na.
+    Manages (i.e., documents, tracks, and reports) the security state of organizational
+    information systems and the environments in which those systems operate through
+    security authorization processes;\nb. Designates individuals to fulfill specific
+    roles and responsibilities within the organizational risk management process;
+    and\nc. Fully integrates the security authorization processes into an organization-wide
+    risk management program. Department of Sobriety Handbook XX documents and
+    sets forth the Department Information Assurance (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_PM_11
+  title: NIST 800-53r4 PM-11 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization:\na.
+    Defines mission/business processes with consideration for information security
+    and the resulting risk to organizational operations, organizational assets, individuals,
+    other organizations, and the Nation; and\nb. Determines information protection
+    needs arising from the defined mission/business processes and revises the processes
+    as necessary, until achievable protection needs are obtained. Department of Sobriety
+    Handbook XX documents and sets forth the Department Information Assurance
+    (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_RA_4
+  title: NIST 800-53r4 RA-4 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to none Department of Sobriety
+    Handbook XX documents and sets forth the Department Information Assurance
+    (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_SA_1
+  title: NIST 800-53r4 SA-1 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization:\na.
+    Develops, documents, and disseminates to [Assignment: organization-defined personnel
+    or roles]:\na.1. A system and services acquisition policy that addresses purpose,
+    scope, roles, responsibilities, management commitment, coordination among organizational
+    entities, and compliance; and\na.2. Procedures to facilitate the implementation
+    of the system and services acquisition policy and associated system and services
+    acquisition controls; and\nb. Reviews and updates the current:\nb.1. System and
+    services acquisition policy [Assignment: organization-defined frequency]; and\nb.2.
+    System and services acquisition procedures [Assignment: organization-defined frequency].
+    Department of Sobriety Handbook XX documents and sets forth the Department
+    Information Assurance (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_SA_3
+  title: NIST 800-53r4 SA-3 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization:\na.
+    Manages the information system using [Assignment: organization-defined system
+    development life cycle] that incorporates information security considerations;\nb.
+    Defines and documents information security roles and responsibilities throughout
+    the system development life cycle;\nc. Identifies individuals having information
+    security roles and responsibilities; and\nd. Integrates the organizational information
+    security risk management process into system development life cycle activities.
+    Department of Sobriety Handbook XX documents and sets forth the Department
+    Information Assurance (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_SA_6
+  title: NIST 800-53r4 SA-6 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to none Department of Sobriety
+    Handbook XX documents and sets forth the Department Information Assurance
+    (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_SC_1
+  title: NIST 800-53r4 SC-1 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization:\na.
+    Develops, documents, and disseminates to [Assignment: organization-defined personnel
+    or roles]:\na.1. A system and communications protection policy that addresses
+    purpose, scope, roles, responsibilities, management commitment, coordination among
+    organizational entities, and compliance; and\na.2. Procedures to facilitate the
+    implementation of the system and communications protection policy and associated
+    system and communications protection controls; and\nb. Reviews and updates the
+    current:\nb.1. System and communications protection policy [Assignment: organization-defined
+    frequency]; and\nb.2. System and communications protection procedures [Assignment:
+    organization-defined frequency]. Department of Sobriety Handbook XX documents
+    and sets forth the Department Information Assurance (IA) Security Policy.  \n\n"
+- id: ssp_nist80053r4_SI_1
+  title: NIST 800-53r4 SI-1 Control Implementation
+  format: markdown
+  template: "{{organization}} uses DoSob Handbook –01 to the organization:\na.
+    Develops, documents, and disseminates to [Assignment: organization-defined personnel
+    or roles]:\na.1. A system and information integrity policy that addresses purpose,
+    scope, roles, responsibilities, management commitment, coordination among organizational
+    entities, and compliance; and\na.2. Procedures to facilitate the implementation
+    of the system and information integrity policy and associated system and information
+    integrity controls; and\nb. Reviews and updates the current:\nb.1. System and
+    information integrity policy [Assignment: organization-defined frequency]; and\nb.2.
+    System and information integrity procedures [Assignment: organization-defined
+    frequency]. Department of Sobriety Handbook XX documents and sets forth
+    the Department Information Assurance (IA) Security Policy.  \n\n"

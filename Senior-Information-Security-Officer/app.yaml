@@ -1,0 +1,54 @@
+id: app
+title: Senior Information Security Officer
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/senior-information-security-officer
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Senior Information Security Officer
+    long: Generates compliance documentation of Senior Information Security Officer
+      as it pertains to managing the security of CUI (Controlled Unclassified Information)
+      as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    The Senior Infomation Security Officer is appointed with the mission and resources
+    to coordinate, develop, implement, and maintain an organization-wide information
+    security program.
+
+    This application will make sure you are properly using Senior Information Security
+    Officer to protect CUI (Controlled Unclassified Information) as per NIST 800-53r4
+    controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_PM_2
+  title: NIST 800-53r4 PM-2 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Senior Information Security Officer to the organization
+    appoints a senior information security officer with the mission and resources
+    to coordinate, develop, implement, and maintain an organization-wide information
+    security program. The Senior Infomation Security Officer is appointed with the
+    mission and resources to coordinate, develop, implement, and maintain an organization-wide
+    information security program.
+

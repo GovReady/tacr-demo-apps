@@ -1,0 +1,50 @@
+id: app
+title: Ed Information Security Program
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/ed-information-security-program
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: draft
+  version: 0.2.5
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: Compliance of Ed Information Security Program
+    long: Generates compliance documentation of Ed Information Security Program as
+      it pertains to managing the security to NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Department of Sobriety Information Security Program is responsible for supporting
+    computer security throughout the Department.
+
+    This application will make sure you are properly using Ed Information Security
+    Program as per NIST 800-53r4
+    controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_CM_4
+  title: NIST 800-53r4 CM-4 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Ed Information Security Program to the organization analyzes
+    changes to the information system to determine potential security impacts prior
+    to change implementation. Department of Sobriety Information Security Program
+    is responsible for supporting computer security throughout the Department.
+

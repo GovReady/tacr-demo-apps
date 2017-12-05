@@ -1,0 +1,68 @@
+id: app
+title: Department of Sobriety personnel security standards
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/department-of-education-personnel-security-standards
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Department of Sobriety personnel security
+      standards
+    long: Generates compliance documentation of Department of Sobriety personnel
+      security standards as it pertains to managing the security of CUI (Controlled
+      Unclassified Information) as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Department of Sobriety personnel security standards define the security standards
+    for Department and contractor personel.
+
+    This application will make sure you are properly using Department of Sobriety
+    personnel security standards to protect CUI (Controlled Unclassified Information)
+    as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_PS_1
+  title: NIST 800-53r4 PS-1 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Department of Sobriety personnel security standards to
+    the organization:
+
+    a. Develops, documents, and disseminates to [Assignment: organization-defined
+    personnel or roles]:
+
+    a.1. A personnel security policy that addresses purpose, scope, roles, responsibilities,
+    management commitment, coordination among organizational entities, and compliance;
+    and
+
+    a.2. Procedures to facilitate the implementation of the personnel security policy
+    and associated personnel security controls; and
+
+    b. Reviews and updates the current:
+
+    b.1. Personnel security policy [Assignment: organization-defined frequency]; and
+
+    b.2. Personnel security procedures [Assignment: organization-defined frequency].
+    Department of Sobriety personnel security standards define the security standards
+    for Department and contractor personel.
+

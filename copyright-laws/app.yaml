@@ -1,0 +1,58 @@
+id: app
+title: copyright laws
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/copyright-laws
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of copyright laws
+    long: Generates compliance documentation of copyright laws as it pertains to managing
+      the security of CUI (Controlled Unclassified Information) as per NIST 800-53r4
+      controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Copyright Laws are federal statutes granting certain exclusive rights to authors
+    of original works.
+
+    This application will make sure you are properly using copyright laws to protect
+    CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_CM_10
+  title: NIST 800-53r4 CM-10 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses copyright laws to the organization:
+
+    a. Uses software and associated documentation in accordance with contract agreements
+    and copyright laws;
+
+    b. Tracks the use of software and associated documentation protected by quantity
+    licenses to control copying and distribution; and
+
+    c. Controls and documents the use of peer-to-peer file sharing technology to ensure
+    that this capability is not used for the unauthorized distribution, display, performance,
+    or reproduction of copyrighted work. Copyright Laws are federal statutes granting
+    certain exclusive rights to authors of original works.
+

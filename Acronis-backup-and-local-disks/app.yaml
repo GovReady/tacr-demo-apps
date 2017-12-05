@@ -1,0 +1,64 @@
+id: app
+title: Acronis backup  and local disks
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/acronis-backup-and-local-disks
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Acronis backup  and local disks
+    long: Generates compliance documentation of Acronis backup  and local disks as
+      it pertains to managing the security of CUI (Controlled Unclassified Information)
+      as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Acronis Backup  and Local Disks are used to maintain copies of system records
+    for recovery purposes.
+
+    This application will make sure you are properly using Acronis backup  and local
+    disks to protect CUI (Controlled Unclassified Information) as per NIST 800-53r4
+    controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_CP_9
+  title: NIST 800-53r4 CP-9 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Acronis backup  and local disks to the organization:
+
+    a. Conducts backups of user-level information contained in the information system
+    [Assignment: organization-defined frequency consistent with recovery time and
+    recovery point objectives];
+
+    b. Conducts backups of system-level information contained in the information system
+    [Assignment: organization-defined frequency consistent with recovery time and
+    recovery point objectives];
+
+    c. Conducts backups of information system documentation including security-related
+    documentation [Assignment: organization-defined frequency consistent with recovery
+    time and recovery point objectives]; and
+
+    d. Protects the confidentiality, integrity, and availability of backup information
+    at storage locations. Acronis Backup  and Local Disks are used to maintain copies
+    of system records for recovery purposes.
+

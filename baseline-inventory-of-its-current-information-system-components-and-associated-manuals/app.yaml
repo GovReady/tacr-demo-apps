@@ -1,0 +1,108 @@
+id: app
+title: baseline inventory of its current information system components and associated
+  manuals
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/baseline-inventory-of-its-current-information-system-components-and-associated-manuals
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of baseline inventory of its current information
+      system components and associated manuals
+    long: Generates compliance documentation of baseline inventory of its current
+      information system components and associated manuals as it pertains to managing
+      the security of CUI (Controlled Unclassified Information) as per NIST 800-53r4
+      controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Baseline inventory of TACR current information system components and associated
+    manuals is a catalog of composing elements and their associated manuals of the
+    TACR system.
+
+    This application will make sure you are properly using baseline inventory of its
+    current information system components and associated manuals to protect CUI (Controlled
+    Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_CM_10
+  title: NIST 800-53r4 CM-10 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses baseline inventory of its current information system components
+    and associated manuals to the organization:
+
+    a. Uses software and associated documentation in accordance with contract agreements
+    and copyright laws;
+
+    b. Tracks the use of software and associated documentation protected by quantity
+    licenses to control copying and distribution; and
+
+    c. Controls and documents the use of peer-to-peer file sharing technology to ensure
+    that this capability is not used for the unauthorized distribution, display, performance,
+    or reproduction of copyrighted work. Baseline inventory of TACR current information
+    system components and associated manuals is a catalog of composing elements and
+    their associated manuals of the TACR system.
+
+- id: ssp_nist80053r4_CM_11
+  title: NIST 800-53r4 CM-11 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses baseline inventory of its current information system components
+    and associated manuals to the organization:
+
+    a. Establishes [Assignment: organization-defined policies] governing the installation
+    of software by users;
+
+    b. Enforces software installation policies through [Assignment: organization-defined
+    methods]; and
+
+    c. Monitors policy compliance at [Assignment: organization-defined frequency].
+    Baseline inventory of TACR current information system components and associated
+    manuals is a catalog of composing elements and their associated manuals of the
+    TACR system.
+
+- id: ssp_nist80053r4_CM_8
+  title: NIST 800-53r4 CM-8 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses baseline inventory of its current information system components
+    and associated manuals to the organization:
+
+    a. Develops and documents an inventory of information system components that:
+
+    a.1. Accurately reflects the current information system;
+
+    a.2. Includes all components within the authorization boundary of the information
+    system;
+
+    a.3. Is at the level of granularity deemed necessary for tracking and reporting;
+    and
+
+    a.4. Includes [Assignment: organization-defined information deemed necessary to
+    achieve effective information system component accountability]; and
+
+    b. Reviews and updates the information system component inventory [Assignment:
+    organization-defined frequency]. Baseline inventory of TACR current information
+    system components and associated manuals is a catalog of composing elements and
+    their associated manuals of the TACR system.
+

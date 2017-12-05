@@ -1,0 +1,42 @@
+id: app
+title: TACR Security IRP Checklist
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-ssp-text
+- govready.com/apps/compliance/2017/security-irp-checklist
+version: 0.5
+icon: app.png
+catalog:
+  category: Description
+  vendor: ContractorCo
+  vendor_url: http://www.ContractorCo.com
+  status: draft
+  version: 0.3
+  source_url: https://github.com/GovReady/ssp-via-govready/tree/master/out/generic/security-irp-checklist
+  description:
+    short: System security IRP checklist for TACR
+    long: Generates the system security IRP checklist for TACR
+
+introduction:
+  format: markdown
+  template: >-
+    Generates the system security IRP checklist for TACR
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: security_irp_checklist
+  title: Security IRP Checklist
+  format: markdown
+  template: >+
+    # TACR Security Incident Response Procedure Checklist
+
+
+    *This is a short, actionable checklist for the* **Incident Commander** *(IC) and* **Responders** *to follow during incident response. It's a companion to the [Security Incident Response](blank.md) guide, where you can find the full details of each step.*
+
+
+    REDACTED
+

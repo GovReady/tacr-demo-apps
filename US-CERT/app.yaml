@@ -1,0 +1,65 @@
+id: app
+title: US-CERT
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/us-cert
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of US-CERT
+    long: Generates compliance documentation of US-CERT as it pertains to managing
+      the security of CUI (Controlled Unclassified Information) as per NIST 800-53r4
+      controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    US-CERT is an organization within the Department of Homeland Security's National
+    Protection and Programs Directorate (NPPD) with responsiblities for assisting
+    with cyber threats, vulnerabilities,ber-related information sharing and activity
+    coordinating.
+
+    This application will make sure you are properly using US-CERT to protect CUI
+    (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_SI_5
+  title: NIST 800-53r4 SI-5 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses US-CERT to the organization:
+
+    a. Receives information system security alerts, advisories, and directives from
+    [Assignment: organization-defined external organizations] on an ongoing basis;
+
+    b. Generates internal security alerts, advisories, and directives as deemed necessary;
+
+    c. Disseminates security alerts, advisories, and directives to: [Selection (one
+    or more): [Assignment: organization-defined personnel or roles]; [Assignment:
+    organization-defined elements within the organization]; [Assignment: organization-defined
+    external organizations]]; and
+
+    d. Implements security directives in accordance with established time frames,
+    or notifies the issuing organization of the degree of noncompliance. US-CERT is
+    an organization within the Department of Homeland Security's National Protection
+    and Programs Directorate (NPPD) with responsiblities for assisting with cyber
+    threats, vulnerabilities,ber-related information sharing and activity coordinating.
+

@@ -1,0 +1,66 @@
+id: app
+title: current lists of personnel authorized to access to the collocation facility
+  in Annapolis
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/current-lists-of-personnel-authorized-to-access-to-the-collocation-facility-in-annapolis
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of current lists of personnel authorized
+      to access to the collocation facility in Annapolis
+    long: Generates compliance documentation of current lists of personnel authorized
+      to access to the collocation facility in Annapolis as it pertains to managing
+      the security of CUI (Controlled Unclassified Information) as per NIST 800-53r4
+      controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Current lists of personnel authorized to access to the collocation facility in
+    Annapolis is the authoritive enumaration individuals permitted access to data
+    center housing TACR.
+
+    This application will make sure you are properly using current lists of personnel
+    authorized to access to the collocation facility in Annapolis to protect CUI (Controlled
+    Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_PE_2
+  title: NIST 800-53r4 PE-2 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses current lists of personnel authorized to access to the collocation
+    facility in Annapolis to the organization:
+
+    a. Develops, approves, and maintains a list of individuals with authorized access
+    to the facility where the information system resides;
+
+    b. Issues authorization credentials for facility access;
+
+    c. Reviews the access list detailing authorized facility access by individuals
+    [Assignment: organization-defined frequency]; and
+
+    d. Removes individuals from the facility access list when access is no longer
+    required. Current lists of personnel authorized to access to the collocation facility
+    in Annapolis is the authoritive enumaration individuals permitted access to data
+    center housing TACR.
+

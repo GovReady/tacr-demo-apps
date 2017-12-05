@@ -1,0 +1,57 @@
+id: app
+title: TACR POCs
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-pocs
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of TACR POCs
+    long: Generates compliance documentation of TACR POCs as it pertains to managing
+      the security of CUI (Controlled Unclassified Information) as per NIST 800-53r4
+      controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    TACR POCs are points of contact for specific areas of responsibilities.
+
+    This application will make sure you are properly using TACR POCs to protect CUI
+    (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_RA_2
+  title: NIST 800-53r4 RA-2 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses TACR POCs to the organization:
+
+    a. Categorizes information and the information system in accordance with applicable
+    federal laws, Executive Orders, directives, policies, regulations, standards,
+    and guidance;
+
+    b. Documents the security categorization results (including supporting rationale)
+    in the security plan for the information system; and
+
+    c. Ensures that the authorizing official or authorizing official designated representative
+    reviews and approves the security categorization decision. TACR POCs are points
+    of contact for specific areas of responsibilities.
+

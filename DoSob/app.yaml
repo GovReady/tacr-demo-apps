@@ -1,0 +1,126 @@
+id: app
+title: DoEd
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/doed
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: draft
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of DoEd
+    long: Generates compliance documentation of DoSob as it pertains to managing the
+      security of CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    DoSob is the Department of Sobriety.
+
+    This application will make sure you are properly using DoSob to protect CUI (Controlled
+    Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_AC_1
+  title: NIST 800-53r4 AC-1 Control Implementation
+  format: markdown
+  template: >+
+    The Department enforces access control policies to protect the integrity of the TACR System system. This Department reviews and updates this policy as necessary and it has been being updated, as necessary, since April 2008.
+
+- id: ssp_nist80053r4_PS_2
+  title: NIST 800-53r4 PS-2 Control Implementation
+  format: markdown
+  template: |+
+    {{organization}} uses DoSob to the organization:
+    a. Assigns a risk designation to all organizational positions;
+    b. Establishes screening criteria for individuals filling those positions; and
+    c. Reviews and updates position risk designations [Assignment: organization-defined frequency]. DoSob is the Department of Sobriety.
+
+- id: ssp_nist80053r4_PS_3
+  title: NIST 800-53r4 PS-3 Control Implementation
+  format: markdown
+  template: |+
+    {{organization}} uses DoSob to the organization:
+    a. Screens individuals prior to authorizing access to the information system; and
+    b. Rescreens individuals according to [Assignment: organization-defined conditions requiring rescreening and, where rescreening is so indicated, the frequency of such rescreening]. DoSob is the Department of Sobriety.
+
+- id: ssp_nist80053r4_PS_4
+  title: NIST 800-53r4 PS-4 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses DoSob to the organization, upon termination of individual
+    employment:
+
+    a. Disables information system access within [Assignment: organization-defined
+    time period];
+
+    b. Terminates/revokes any authenticators/credentials associated with the individual;
+
+    c. Conducts exit interviews that include a discussion of [Assignment: organization-defined
+    information security topics];
+
+    d. Retrieves all security-related organizational information system-related property;
+
+    e. Retains access to organizational information and information systems formerly
+    controlled by terminated individual; and
+
+    f. Notifies [Assignment: organization-defined personnel or roles] within [Assignment:
+    organization-defined time period]. DoSob is the Department of Sobriety.
+
+- id: ssp_nist80053r4_SA_7
+  title: NIST 800-53r4 SA-7 Control Implementation
+  format: markdown
+  template: |+
+    {{organization}} uses DoSob to none DoSob is the Department of Sobriety.
+
+- id: ssp_nist80053r4_SA_9
+  title: NIST 800-53r4 SA-9 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses DoSob to the organization:
+
+    a. Requires that providers of external information system services comply with
+    organizational information security requirements and employ [Assignment: organization-defined
+    security controls] in accordance with applicable federal laws, Executive Orders,
+    directives, policies, regulations, standards, and guidance;
+
+    b. Defines and documents government oversight and user roles and responsibilities
+    with regard to external information system services; and
+
+    c. Employs [Assignment: organization-defined processes, methods, and techniques]
+    to monitor security control compliance by external service providers on an ongoing
+    basis. DoSob is the Department of Sobriety.
+
+- id: ssp_nist80053r4_SI_2
+  title: NIST 800-53r4 SI-2 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses DoSob to the organization:
+
+    a. Identifies, reports, and corrects information system flaws;
+
+    b. Tests software and firmware updates related to flaw remediation for effectiveness
+    and potential side effects before installation;
+
+    c. Installs security-relevant software and firmware updates within [Assignment:
+    organization-defined time period] of the release of the updates; and
+
+    d. Incorporates flaw remediation into the organizational configuration management
+    process. DoSob is the Department of Sobriety.
+

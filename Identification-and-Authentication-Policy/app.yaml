@@ -1,0 +1,67 @@
+id: app
+title: Identification and Authentication Policy
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/identification-and-authentication-policy
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Identification and Authentication Policy
+    long: Generates compliance documentation of Identification and Authentication
+      Policy as it pertains to managing the security of CUI (Controlled Unclassified
+      Information) as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    The Identification and Authentication Policy sets forth and documents Department
+    standards and procedures for validating the identity of individuals.
+
+    This application will make sure you are properly using Identification and Authentication
+    Policy to protect CUI (Controlled Unclassified Information) as per NIST 800-53r4
+    controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_IA_1
+  title: NIST 800-53r4 IA-1 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Identification and Authentication Policy to the organization:
+
+    a. Develops, documents, and disseminates to [Assignment: organization-defined
+    personnel or roles]:
+
+    a.1. An identification and authentication policy that addresses purpose, scope,
+    roles, responsibilities, management commitment, coordination among organizational
+    entities, and compliance; and
+
+    a.2. Procedures to facilitate the implementation of the identification and authentication
+    policy and associated identification and authentication controls; and
+
+    b. Reviews and updates the current:
+
+    b.1. Identification and authentication policy [Assignment: organization-defined
+    frequency]; and
+
+    b.2. Identification and authentication procedures [Assignment: organization-defined
+    frequency]. The Identification and Authentication Policy sets forth and documents
+    Department standards and procedures for validating the identity of individuals.
+

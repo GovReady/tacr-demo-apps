@@ -1,0 +1,64 @@
+id: app
+title: Contingency Planning Policy
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/contingency-planning-policy
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Contingency Planning Policy
+    long: Generates compliance documentation of Contingency Planning Policy as it
+      pertains to managing the security of CUI (Controlled Unclassified Information)
+      as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Component description.
+
+    This application will make sure you are properly using Contingency Planning Policy
+    to protect CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_CP_1
+  title: NIST 800-53r4 CP-1 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Contingency Planning Policy to the organization:
+
+    a. Develops, documents, and disseminates to [Assignment: organization-defined
+    personnel or roles]:
+
+    a.1. A contingency planning policy that addresses purpose, scope, roles, responsibilities,
+    management commitment, coordination among organizational entities, and compliance;
+    and
+
+    a.2. Procedures to facilitate the implementation of the contingency planning policy
+    and associated contingency planning controls; and
+
+    b. Reviews and updates the current:
+
+    b.1. Contingency planning policy [Assignment: organization-defined frequency];
+    and
+
+    b.2. Contingency planning procedures [Assignment: organization-defined frequency].
+    Component description.
+

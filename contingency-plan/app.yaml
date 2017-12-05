@@ -1,0 +1,37 @@
+id: app
+title: TACR Contingency Plan
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-ssp-text
+- govready.com/apps/compliance/2017/contingency-plan
+version: 0.5
+icon: app.png
+catalog:
+  category: Description
+  vendor: ContractorCo
+  vendor_url: http://www.ContractorCo.com
+  status: draft
+  version: 0.3
+  source_url: https://github.com/GovReady/ssp-via-govready/tree/master/out/generic/contingency-plan
+  description:
+    short: System Contingency Plan for TACR
+    long: Generates the system contingency plan for TACR
+
+introduction:
+  format: markdown
+  template: >-
+    Generates the system contingency plan for TACR
+questions:
+- id: questions
+  title: TACR Contingency Plan Module
+  type: module
+  module-id: questions
+
+output:
+- id: contingency_plan
+  title: Contingency Plan
+  format: markdown
+  template: >+
+    {{questions.output_documents.contingency_plan|safe}}
+    

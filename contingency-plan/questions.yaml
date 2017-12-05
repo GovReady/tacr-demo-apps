@@ -1,0 +1,149 @@
+id: questions
+title: TACR Contingency Plan
+
+questions:
+- id: document_url_exists
+  title:  Document URL exists?
+  prompt: Does the TACR Contingency exist at a URL?
+  type: yesno
+
+- id: document_url
+  title: Document URL
+  prompt: What is the URL for the TACR Contingency Plan?
+  type: url
+  ask-first:
+    - document_url_exists
+  impute:
+    - condition: document_url_exists == 'no'
+      value: ~
+
+- id: review_frequency
+  title: Review frequency
+  prompt: How often is the TACR Contingency Plan reviewed?
+  type: choice
+  choices:
+    - key: monthly
+      text: monthly
+    - key: quarterly
+      text: quarterly
+    - key: semi-annually
+      text: semi-annually
+    - key: annually
+      text: annually
+    - key: bi-annually
+      text: bi-annually
+
+output:
+- id: contingency_plan
+  title: Contingency Plan
+  format: markdown
+  template: >+
+    # TACR Contingency Plan
+
+    This Contingency Plan provides guidance for our team in the case of trouble delivering our essential mission and business functions because of disruption, compromise, or failure of any component of TACR. As a general guideline, we consider "disruption" to mean unexpected downtime or significantly reduced service lasting longer than:
+
+      * 30 minutes 0900 - 2100 Eastern Time Monday through Friday (standard U.S. business hours)
+      * 90 minutes at other times
+
+
+    Scenarios where that could happen include unexpected downtime of key services, data loss, or improper privilege escalation. In the case of a security incident, the team uses the [Security Incident Response Procedure](blank.md) as well.
+
+    ## Recovery objective
+
+    Short-term disruptions lasting less than 30 minutes are outside the scope of this plan.
+
+
+    More than 3 hours of any TACR service being offline during standard U.S. business hours (0900 - 2100 Eastern Time) would be unacceptable. Our objective is to recover from any significant problem (disruption, compromise, or failure) within that span of time.
+
+
+    ## Incident Response Team information
+
+    ### Contact information
+
+    Team contact information is available in the TACR Google Drive:
+
+    * [ContractorCo/TACR Incident Response Team contact sheet](blank.md) with names and roles for ContractorCo and TACR Incident Response Team members.
+
+    ## Contingency plan outline
+
+    ### Activation and notification
+
+
+    The first Incident Response Team member who notices or reports a potential contingency-plan-level problem becomes the **Incident Commander** (IC) until recovery efforts are complete or the Incident Commander role is explicitly reassigned.
+
+
+    If the problem is identified as part of a [security incident response situation](blank.md) should handle the overall situation, since these response processes must be coordinated.
+
+
+    The IC first notifies and coordinates with the people who are authorized to decide that TACR is in a contingency plan situation:
+
+
+    * From ContractorCo:
+        * Incident Commander
+        * Project Manager
+            * ContractorCo Incident Response Team
+    * TACR
+        * Product Owner
+            * TACR users, when applicable
+
+
+    The IC keeps a log of the situation in a JIRA ticket; if this is also a security incident, the IC also follows the [security incident communications process](blank.md) Slack channel. The IC should delegate assistant ICs for aspects of the situation as necessary.
+
+
+    ### Recovery
+
+    The Incident Response Team assesses the situation and works to recover the system. See the list of [external dependencies](blank.md) for procedures for recovery from problems with external services.
+
+
+    If this is also a security incident, the IC also follows the security incident [assessment](blank.md) processes.
+
+
+    If the IC assesses that the overall response process is likely to last longer than 3 hours, the IC should organize shifts so that each responder works on response for no longer than 3 hours at a time, including handing off their own responsibility to a new IC after 3 hours.
+
+
+    #### Backup and Restore
+
+
+    Hourly and daily [snapshots](blank.md)
+
+      * First determine how far back in time to go to obtain a clean backup for restore
+      * Restore by using the `Recover` tab for the instance needing restoration
+
+
+    ### Reconstitution
+
+    The Incident Response Team tests and validates the system as operational.
+
+
+    The Incident Commander declares that recovery efforts are complete and notifies all relevant people. The last step is to schedule a postmortem in the JIRA Incident ticket (as part of the same of a new ticket) to discuss the event. This is the same as the [security incident retrospective process](blank.md).
+
+
+    ## External dependencies
+
+
+    TACR depends on several external services.  In the event one or more of these services has a long-term disruption, the team will mitigate impact by following this plan.
+
+
+      * **GitLab <https://git.ContractorCo.net/tacr/>:** If GitLab becomes unavailable, TACR will continue to operate in its current state. The disruption would only impact the team's ability to update code on the instances.
+      * **StatusCake <https://app.statuscake.com/>:** If there is a disruption in the StatusCake service, the Incident Response team will be notified by email.
+      * **OpsGenie <https://app.opsgenie.com/alert/V2/>:** If there is a disruption in the OpsGenie service, all alerts automatically get delivered to the team via email.
+      * **JIRA <https://lincsportal.atlassian.net/>:** There is no direct impact to the platform if a disruption occurs. Primary incident communications will move to the [`#tacr`](blank.md) Slack channel.
+      * **Slack <https://ContractorCo.slack.com/messages/tacr/>:** There is no direct impact to the platform if a disruption occurs. Primary incident communications will move to the <https://hangouts.google.com/hangouts/_/ContractorCo.net/lincsscrum> Google Hangout.
+      * **CPM <https://tacr-cpm.ContractorCo.net/console/>:** The Cloud Protection Manager (CPM) provides backup and restore services. There is no direct impact to the platform if a disruption occurs.
+      * **AWS <https://console.aws.amazon.com/?nc2=h_m_mc>:** TACR is hosted on the Amazon Web Services (AWS) IaaS FedRAMP-certified cloud. See [AWS status](blank.md).
+
+
+    In case of a **significant** disruption, after receiving approval from our Authorizing Official, the ContractorCo team will deploy a new instance of the entire system to a different region.
+
+
+    ## How this document works
+
+
+    This plan is most effective if all core ContractorCo team members know about it, remember that it exists, have the ongoing opportunity to give input based on their expertise, and keep it up to date.
+
+
+    * The ContractorCo team is responsible for maintaining this document and updating it as needed. Any change to it must be approved and peer reviewed by at least another member of the team.
+      * All changes to the plan should be communicated to the rest of the team.
+      * At least once a year, and after major changes to our systems, we review and update the plan.
+    * How we protect this plan from unauthorized modification:
+      * This plan is stored in the ContractorCo Gitlab repository (<https://git.ContractorCo.net/tacr/compliance/>) with authorization to modify it limited to the Incident Response Team by Gitlab access controls. ContractorCo policy is that changes are proposed by making a pull request and ask another team member to review and merge the pull request.

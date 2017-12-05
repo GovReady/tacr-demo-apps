@@ -1,0 +1,91 @@
+id: app
+title: Chief Information Security Officer (CISO)
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/chief-information-security-officer-(ciso)
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Chief Information Security Officer (CISO)
+    long: Generates compliance documentation of Chief Information Security Officer
+      (CISO) as it pertains to managing the security of CUI (Controlled Unclassified
+      Information) as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    The Chief Information Security officer is the senior-level executive within an
+    organization responsible for establishing and maintaining the enterprise vision,
+    strategy, and program to ensure information assets and technologies are adequately
+    protected (Wikipedia).
+
+    This application will make sure you are properly using Chief Information Security
+    Officer (CISO) to protect CUI (Controlled Unclassified Information) as per NIST
+    800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_PL_2
+  title: NIST 800-53r4 PL-2 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Chief Information Security Officer (CISO) to the organization:
+
+    a. Develops a security plan for the information system that:
+
+    a.1. Is consistent with the organization�s enterprise architecture;
+
+    a.2. Explicitly defines the authorization boundary for the system;
+
+    a.3. Describes the operational context of the information system in terms of missions
+    and business processes;
+
+    a.4. Provides the security categorization of the information system including
+    supporting rationale;
+
+    a.5. Describes the operational environment for the information system and relationships
+    with or connections to other information systems;
+
+    a.6. Provides an overview of the security requirements for the system;
+
+    a.7. Identifies any relevant overlays, if applicable;
+
+    a.8. Describes the security controls in place or planned for meeting those requirements
+    including a rationale for the tailoring decisions; and
+
+    a.9. Is reviewed and approved by the authorizing official or designated representative
+    prior to plan implementation;
+
+    b. Distributes copies of the security plan and communicates subsequent changes
+    to the plan to [Assignment: organization-defined personnel or roles];
+
+    c. Reviews the security plan for the information system [Assignment: organization-defined
+    frequency];
+
+    d. Updates the plan to address changes to the information system/environment of
+    operation or problems identified during plan implementation or security control
+    assessments; and
+
+    e. Protects the security plan from unauthorized disclosure and modification. The
+    Chief Information Security officer is the senior-level executive within an organization
+    responsible for establishing and maintaining the enterprise vision, strategy,
+    and program to ensure information assets and technologies are adequately protected
+    (Wikipedia).
+

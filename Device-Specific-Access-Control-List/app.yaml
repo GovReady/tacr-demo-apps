@@ -1,0 +1,50 @@
+id: app
+title: Device Specific Access Control List
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/device-specific-access-control-list
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: draft
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Device Specific Access Control List
+    long: Generates compliance documentation of Device Specific Access Control List
+      as it pertains to managing the security of CUI (Controlled Unclassified Information)
+      as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Device Specific Access Control List determines the privileges and permissions
+    that determine the specific access rights to the software features and information
+    stored on a device such as whether a user can read from, write to, or execute
+    an object.
+
+    This application will make sure you are properly using Device Specific Access
+    Control List to protect CUI (Controlled Unclassified Information) as per NIST
+    800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_AC_3
+  title: NIST 800-53r4 AC-3 Control Implementation
+  format: markdown
+  template: >+
+    Access will be controlled with access control list used on each device. Members of one group cannot access resources defined for other groups unless explicitly permitted.
+

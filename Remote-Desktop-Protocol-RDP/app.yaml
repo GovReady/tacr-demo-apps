@@ -1,0 +1,57 @@
+id: app
+title: Remote Desktop Protocol (RDP)
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/remote-desktop-protocol-(rdp)
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Remote Desktop Protocol (RDP)
+    long: Generates compliance documentation of Remote Desktop Protocol (RDP) as it
+      pertains to managing the security of CUI (Controlled Unclassified Information)
+      as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Remote Desktop Protocol is a proprietary protocol developed by Microsoft, which
+    provides a user with a graphical interface to connect to another computer over
+    a network connection (Wikipedia).
+
+    This application will make sure you are properly using Remote Desktop Protocol
+    (RDP) to protect CUI (Controlled Unclassified Information) as per NIST 800-53r4
+    controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_AC_17
+  title: NIST 800-53r4 AC-17 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Remote Desktop Protocol (RDP) to the organization:
+
+    a. Establishes and documents usage restrictions, configuration/connection requirements,
+    and implementation guidance for each type of remote access allowed; and
+
+    b. Authorizes remote access to the information system prior to allowing such connections.
+    Remote Desktop Protocol is a proprietary protocol developed by Microsoft, which
+    provides a user with a graphical interface to connect to another computer over
+    a network connection (Wikipedia).
+

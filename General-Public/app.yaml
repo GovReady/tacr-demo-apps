@@ -1,0 +1,54 @@
+id: app
+title: General Public
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/general-public
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of General Public
+    long: Generates compliance documentation of General Public as it pertains to managing
+      the security of CUI (Controlled Unclassified Information) as per NIST 800-53r4
+      controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    The General Public are people in society at large.
+
+    This application will make sure you are properly using General Public to protect
+    CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_AC_14
+  title: NIST 800-53r4 AC-14 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses General Public to the organization:
+
+    a. Identifies [Assignment: organization-defined user actions] that can be performed
+    on the information system without identification or authentication consistent
+    with organizational missions/business functions; and
+
+    b. Documents and provides supporting rationale in the security plan for the information
+    system, user actions not requiring identification or authentication. The General
+    Public are people in society at large.
+

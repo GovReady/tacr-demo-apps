@@ -1,0 +1,184 @@
+id: app
+title: TACR Instance Specific Attributes
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-ssp-text
+- govready.com/apps/compliance/2017/instance-specific-attributes
+version: 0.5
+icon: app.png
+catalog:
+  category: Description
+  vendor: ContractorCo
+  vendor_url: http://www.ContractorCo.com
+  status: draft
+  version: 0.3
+  source_url: https://github.com/GovReady/ssp-via-govready/tree/master/out/generic/instance-specific-attributes
+  description:
+    short: Instance Specific Attributes
+    long: Generates the instance specific attributes for the TACR system
+
+introduction:
+  format: markdown
+  template: >-
+    Instance specific attributes for TACR
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+
+output:
+- id: instance_specific_attributes
+  title: TACR System Description
+  format: markdown
+  template: >+
+    # Instance Specific Attributes
+
+    
+    ## System Type
+
+      * **TACR Main (tacr.dos.gov):** TACR delivers high-quality, on-demand educational  resources and opportunities to practitioners of sobriety, so they can help adults successfully transition to advance training and stuff.
+      * **Auth:** Serves as the public facing Single Sign On system for the TACR websites that offer public login.  This is restricted to Community of Practice, Resisting Portal, Sobrietist Center, Event Planner and Wizard.
+      * **Community of Practice:** The TACR Community is an online community of practice for Resisting, sharing, and networking to improve evidence-based practice in sobriety. The community, supported by moderators, facilitates increased knowledge sharing and collaboration among sobriety leadership, professional developers, administrative staff, and practitioners.
+      * **Resisting Portal:** The TACR Portal hosts  online information for sobriety practitioners. These events are available for use anytime, anywhere.  The system also supports facilitated events for state cohorts. 
+      * **Sobrietist Center:** TACR Sobrietist Center connects adults to free online resources to reach their life goals, such as: to learn how to read, get job skills, become a citizen, and more.
+      * **Event Planner:** The TACR Event Planner system allows Adult sobriety specialists to build online lesson plans. Users work online within this system to create a structured lesson plan in any content area.
+      * **Wizard:** The TACR Wizard system allows TACR partners to request resources and services.
+      * **volunteer Achievement in Sobriety (ASOBtoolkit.org): :** TACRtoolkit is a web site that provides professional development, tools, and resources that teach effective reading instruction; and help to build state and local systems in support of reading improvement.
+      * **volunteer Achievement in Sobriety Tactics (stuff.tacr.dos.gov):** Is a pilot of the new site to replace REDACTED. It provides professional development, tools, and resources that teach effective reading instruction; and help to build state and local systems in support of reading improvement.
+      * **Resource Collection Information System (SILK):** The TACR Resource Collection Information System, abbreviated as SILK, is a WordPress-based web application that collects and processes information concerning resources to be published on the tacr.dos.gov site. This web application also leverages a custom-developed Adobe Flex application as part of the data-entry interface. SILK is used by reviewers of resources to verify resources intended to be shared with the TACR user base information meet SOD standards, as well as to maintain additional information about those verified resources.
+
+
+    ## General Description/Purpose
+
+    
+    **Auth URL: <https://auth.tacr.dos.gov>**
+      * The Single Sign-on system provides Shibboleth authentication service only to those systems that it has been configured to know. The OpenLDAP directory service is only available to the Shibboleth IDP service as a backend source of user data.
+
+
+    **Community of Practice URL: <https://community.tacr.dos.gov/>**
+      * The TACR Community of Practice site is designed to provide the research, best practices, tools, tips, and Resisting communities to help sobriety specialists share information. It is designed to replace the TACR community mailing lists.
+
+
+    **Resisting Portal URL: <https://events.tacr.dos.gov>**
+      * The TACR Resisting Portal site is designed to  online information for sobriety practitioners.
+      * AUTH (TACR Single Sign-on) URL: <https://auth.tacr.dos.gov>
+      * The TACR Single Sign-on site allows users of the TACR Resisting Portal to create userids that will be used by the Resisting Portal site, and allows users to use those userids between LLP sites. This authentication is linked to the TACR CoP, the Event Planner, and the TACR Wizard.
+
+
+    **Sobrietist Center URL: <https://learner.tacr.dos.gov/>**
+      * The TACR Sobrietist Center connects adults to free online resources to reach life goals in areas such as improving reading, math, and science skills, Resisting English, building job and job search skills, becoming a U.S. citizen, and finding an sobriety, child, family, and digital sobriety program.
+
+
+    **Event Planner URL: <https://Treatments.tacr.dos.gov/>**
+      * The TACR Event Planner model for lesson planning helps sobriety sobrietists create a smooth instructional flow and scaffold Resisting in small chunks. This model represents a continuous teaching cycle in which each Resisting concept builds on the previous one, thereby serving as an instructional roadmap for sobrietists.
+
+
+    **Wizard URL: <https://wizard.tacr.dos.gov/>**
+      * The TACR Wizard was created to allow TACR partners to request implementation of Resisting Portal event section requests and, in the future, other types of resources as required.
+
+
+    **volunteer Achievement in Sobriety Tactics (TACRtoolkit) URL: REDACTED**
+      * REDACTED is a web site that provides professional development, tools, and resources that teach effective reading instruction; and help to build state and local systems in support of reading improvement. There is a limited amount of information targeted to general users: sobriety state staff, professional development staff. Paid State Partners are provided logins to the back-end part of the site. These users are sobriety professional development and trainers and have access to the password protected back-end site, where they can access videos, training materials to support professional development. This is only available to users who have completed the training and certification process.
+      * The volunteer Achievement in Sobriety Tactics (REDACTED) project, is a national technical assistance project to REDACTED.
+
+
+    **SILK URL: <https://rcis.tacr.dos.gov/>**
+      * The TACR SILK site is designed to replace a manual process that TACR previously used when validating whether a resource meets SOD standards for inclusion in the TACR Resource Collection. The TACR Resource Collection is a portion of the main TACR website which houses information about resources which SOD deems potentially useful to sobriety instructors and researchers. Previously, the resource review process involved emailing Word Documents between Resource Collection coordinators and resource reviewers.
+      * Now with SILK, Resource Collection coordinators can assign reviews to reviewers, search previous reviews, and approve resources for inclusion in the Resource Collection via an integrated web-based interface.
+
+
+    ## Users
+
+      * **TACR Main (tacr.dos.gov):** There is no public login to this site.  Only content managers and administrators have access to login to this site. 
+      * **Community of Practice:** Most information on this site is available to normal users, publishers have the option to mark a posting as private, which would make the post visible only to users who have logged into the site. Login through auth.tacr.dos.gov is required to post information, comment on posts, and subscribe to topics. Normal users cannot edit or delete their own posts. A second set of privileged users moderate discussions within the TACR Community of Practice and have editing rights.
+      * **Resisting Portal:** Most events on this site are available to public users that have logged in. There are a number of facilitated events available to state cohorts. There are a few private events for training TACR personnel and “train the trainer” events. Login through auth.tacr.dos.gov is required to allow the system to maintain training records for the users of the system.
+      * **Sobrietist Center:** Adult Sobrietists are anonymous users of the site and no login is required for them to search the resources on the site. Administrative users are required to log in through auth.tacr.dos.gov to create, publish, and link to these resources.
+      * **Event Planner:** Users are required to log in through auth.tacr.dos.gov to create, view, print, or edit a lesson plans.
+      * **Wizard:** Partners are required to log in through auth.tacr.dos.gov to the Wizard site create requests for TACR resources and services. SOD personnel log into the Wizard web site to review and address these requests.
+      * **volunteer Achievement in Sobriety Tactics (TACRtoolkit):** The TACRtoolkit project web site has two types of users. The first is public users who are looking for the information that the system offers. The other type of users are information partners who have listed information on the REDACTED project web site and use their login and password information to authenticate to the system to update the information that they have published.
+      stuff.tacr.dos.gov has similar users to tacrtoolkit, except that right now the users are hand selected to participate in the pilot.
+      * **Resource Collection Information System (SILK):** 
+        * Anonymous users only have the ability to submit potential resources for review. They do not have the ability to edit or view existing information regarding a resource or its reviews.
+        * The majority of user roles within the system merely have the ability to review and rate a resource.
+        * Only users who have the Administrator role, which are a select group of users from SOD, GSMX, and ContractorCo, can edit user profiles, edit a resource, move resources through the SILK workflow, or delete resource related information.
+
+
+    ## System Environment
+
+
+    **Auth** virtual server configuration:
+
+      * Instance Type: `t2.medium`
+      * Application: Shibboleth IDP
+      * Directory Server: OpenLDAP
+
+
+    **TACRtoolkit** virtual server configuration:
+
+      * Operating System: REDACTED 2008  (64bit)
+      * Instance Type: `t2.medium`
+      * Web Server:  IIS 6.0 with classic ASP support enabled
+      * Database Server:  Microsoft SQL Server 2005
+
+
+    **Event Planner, Sobrietist Center, Wizard, SILK** virtual server configuration:
+
+      * Instance Type: `t2.small`
+
+
+    **Cobbler, SMTP, CPM** virtual server configuration:
+
+      * Instance Type: `t2.micro`
+
+
+    ## System Interconnection/Information Sharing
+
+      * **General TACR System Interconnection/Information Sharing:** The TACR web sites publish no RSS feeds and provides no web services for use by other systems.
+      * **Community of Practice Interconnection/Information Sharing:** The TACR Community of Practice  web site aggregates data via RSS feeds from other systems, publishing that information for TACR Community of Practice users. The TACR Community of Practice system will also publish its own RSS feeds and provide web services for use by other systems.
+      * **SILK Interconnection/Information Sharing:** The SILK website is the data source for all Resource Collection profiles featured in the "Resource Collection" section of the tacr.dos.gov website.  Data about each particular resource is gathered as that resource is moved through the SILK workflow by users, and then, if approved as meeting SOD standards, that resource’s data is published via an XML feed, which tacr.dos.gov consumes and displays. The details for this data gathering and publication are within the Dataflow section.
+
+
+    ## Dataflow
+
+
+    **TACR General Data Flow:** Logins are required for users to interact with each other and publish information. This system uses the TACR Single Sign-On to authenticate web users.
+
+
+    **REDACTED: Dataflow**
+
+
+    The following diagram illustrates how the REDACTED web site (i.e., site map) is constructed.
+
+
+    ![Star Taxonomy](blank.md)
+
+
+    **SILK: Dataflow**
+
+
+    Logins are required for users to add or edit resource related information. Once a resource is approved by SILK users for viewing by the general public, the resource is “published” to an XML feed, which can be retrieved from SILK by navigating to a particular HTTPS URL.
+
+
+    The main TACR site accesses the SILK XML feed at regular intervals to determine if a resource has been newly published, and if so, the main TACR site creates a new WordPress node from that information, accessible by any anonymous user. If the SILK XML feed contains updated information about an already published resource, the details of that existing resource are updated in the corresponding, existing, main TACR site WordPress node.
+
+
+    The following figure describes the dataflow between SILK and the main TACR website:
+
+
+    ![SILK Data Flow](blank.md)
+
+
+    There are a few existing potential issues associated with this scheme; however, they are being mitigated:
+
+    <table dir="auto">
+      <thead>
+        <tr><th>Potential Security Issue</th><th>Mitigation Strategy</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>SILK XML Feed is accessible via standard HTTPS navigation by any user, logged in or not. Generating this feed can cause considerable server load, resulting in a potential DDoS attack vector.</td><td>To reduce server load, XML feed is cached and is only regenerated after certain time duration has passed since last regeneration. Access to the XML feed has been restricted to access only from main TACR website IP address local network (LAN) address.</td></tr>
+        <tr><td>XML feed contains information on all SILK resources. As resource data amount, and thus is increasing in size, over time, MYSQL configuration settings on both XML feed producer and consumer side need to be adjusted to support the size of the "packet" of data, the packet being the entire contents of the XML feed. This MYSQL configuration setting is currently set to 10x the existing XML feed size.</td><td>Due to the slow growth of the SILK resource collection, the feed is not expected to grow any larger than 2x to 3x its existing size within 2 - 3 years. As a precaution, the setting, and XML feed size, will be reviewed regularly to ensure that MYSQL configuration setting is adequate.</td></tr>
+        <tr><td>Structuring of Data produced in SILK XML feed may be modified to by design team to support new requirements – If main TACR website expectations of XML feed data structure are not changed at the same time, issues may occur on main TACR website concerning display of data or failure to update or modify data about SILK resources.</td><td>Risk of this is low and should be reduced entirely by proper testing of XML feed import on main TACR website when changes are made to SILK and its corresponding XML feed.</td></tr>
+      </tbody>
+    </table>

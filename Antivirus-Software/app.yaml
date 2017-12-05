@@ -1,0 +1,69 @@
+id: app
+title: Antivirus Software
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/antivirus-software
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Antivirus Software
+    long: Generates compliance documentation of Antivirus Software as it pertains
+      to managing the security of CUI (Controlled Unclassified Information) as per
+      NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Antivirus Software is a software that scans systems for unapproved and malicious
+    software.
+
+    This application will make sure you are properly using Antivirus Software to protect
+    CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_SI_3
+  title: NIST 800-53r4 SI-3 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Antivirus Software to the organization:
+
+    a. Employs malicious code protection mechanisms at information system entry and
+    exit points to detect and eradicate malicious code;
+
+    b. Updates malicious code protection mechanisms whenever new releases are available
+    in accordance with organizational configuration management policy and procedures;
+
+    c. Configures malicious code protection mechanisms to:
+
+    c.1. Perform periodic scans of the information system [Assignment: organization-defined
+    frequency] and real-time scans of files from external sources at [Selection (one
+    or more); endpoint; network entry/exit points] as the files are downloaded, opened,
+    or executed in accordance with organizational security policy; and
+
+    c.2. [Selection (one or more): block malicious code; quarantine malicious code;
+    send alert to administrator; [Assignment: organization-defined action]] in response
+    to malicious code detection; and
+
+    d. Addresses the receipt of false positives during malicious code detection and
+    eradication and the resulting potential impact on the availability of the information
+    system. Antivirus Software is a software that scans systems for unapproved and
+    malicious software.
+

@@ -1,0 +1,94 @@
+id: app
+title: Federal Acquisition Regulation (FAR)
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/federal-acquisition-regulation-(far)
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Federal Acquisition Regulation (FAR)
+    long: Generates compliance documentation of Federal Acquisition Regulation (FAR)
+      as it pertains to managing the security of CUI (Controlled Unclassified Information)
+      as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Federal Acquisition Rules sets forth and document federal codes for the purchase
+    of goods and services by Federal govenrment agencies.
+
+    This application will make sure you are properly using Federal Acquisition Regulation
+    (FAR) to protect CUI (Controlled Unclassified Information) as per NIST 800-53r4
+    controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_SA_1
+  title: NIST 800-53r4 SA-1 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Federal Acquisition Regulation (FAR) to the organization:
+
+    a. Develops, documents, and disseminates to [Assignment: organization-defined
+    personnel or roles]:
+
+    a.1. A system and services acquisition policy that addresses purpose, scope, roles,
+    responsibilities, management commitment, coordination among organizational entities,
+    and compliance; and
+
+    a.2. Procedures to facilitate the implementation of the system and services acquisition
+    policy and associated system and services acquisition controls; and
+
+    b. Reviews and updates the current:
+
+    b.1. System and services acquisition policy [Assignment: organization-defined
+    frequency]; and
+
+    b.2. System and services acquisition procedures [Assignment: organization-defined
+    frequency]. Federal Acquisition Rules sets forth and document federal codes for
+    the purchase of goods and services by Federal govenrment agencies.
+
+- id: ssp_nist80053r4_SA_4
+  title: NIST 800-53r4 SA-4 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Federal Acquisition Regulation (FAR) to the organization
+    includes the following requirements, descriptions, and criteria, explicitly or
+    by reference, in the acquisition contract for the information system, system component,
+    or information system service in accordance with applicable federal laws, Executive
+    Orders, directives, policies, regulations, standards, guidelines, and organizational
+    mission/business needs:
+
+    a. Security functional requirements;
+
+    b. Security strength requirements;
+
+    c. Security assurance requirements;
+
+    d. Security-related documentation requirements;
+
+    e. Requirements for protecting security-related documentation;
+
+    f. Description of the information system development environment and environment
+    in which the system is intended to operate; and
+
+    g. Acceptance criteria. Federal Acquisition Rules sets forth and document federal
+    codes for the purchase of goods and services by Federal govenrment agencies.
+

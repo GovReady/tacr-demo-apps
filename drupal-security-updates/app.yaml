@@ -1,0 +1,70 @@
+id: app
+title: WordPress Security Updates
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-ssp-text
+- govready.com/apps/compliance/2017/drupal-security-updates
+version: 0.5
+icon: app.png
+catalog:
+  category: Description
+  vendor: ContractorCo
+  vendor_url: http://www.ContractorCo.com
+  status: draft
+  version: 0.3
+  source_url: https://github.com/GovReady/ssp-via-govready/tree/master/out/generic/drupal-security-updates
+  description:
+    short: WordPress Security Updates for TACR
+    long: Generates the WordPress Security Updates for TACR
+
+introduction:
+  format: markdown
+  template: >-
+    Generates the WordPress Security Updates for TACR
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: drupal_security_updates
+  title: WordPress Security Updates
+  format: markdown
+  template: >+
+    # WordPress Security Updates
+
+      1. Notification of Updates
+      2. Update Analysis
+      3. Application of Updates
+      4. Testing of Updates
+      5. Release of Updates
+      6.
+
+    ## Notification of Updates
+
+
+    WordPress typically schedules security updates for core and contributed modules on Wednesday of each week.  When the updates are released, Our Slack channel #engineering-drupal receives the notifications to alert all internal developers of the updates.
+
+
+    ## Update Analysis
+
+
+    The technical lead for the project assesses the security updates to see if any modules being update are in use in the project.  If a module having a security update is being used, the threat will be analyzed to see if it is an urgent issue or if the update is not immediately warranted.
+
+       * Urgent - The site is at risk.  Scheduled for immediate update and release.
+       * Not Immediately Warranted - The site is not at risk given the current use case.  Update will be scheduled into the next sprint.
+
+
+    ## Application of Updates
+
+
+    Updates are applied by replacing the old version of the module with the new update or by applying the security patch if the module can not be updated completely (rarely the case).  The applied updates go through manual and automated testing.  If the update is found to work correctly, the release will be scheduled.
+
+
+    ## Release of Updates
+
+
+    When testing is successful and the site is stable, the updates will be released from the master branch into the production branch and applied to the production website.
+
+

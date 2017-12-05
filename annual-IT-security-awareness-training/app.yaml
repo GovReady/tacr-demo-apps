@@ -1,0 +1,55 @@
+id: app
+title: Annual IT Security Awareness Training
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/annual-it-security-awareness-training
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: draft
+  version: 0.4
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: Annual IT Security Awareness Training
+    long: Generates compliance documentation of annual IT security awareness training
+      as it pertains to managing to NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: "Annual IT Security Awareness Training provides individuals with important
+    information on avoiding security risks and is a requirement for accessing Department
+    information systems. \nThis application will make sure you are properly using
+    annual IT security awareness training to meet NIST 800-53r4 controls."
+questions:
+- id: questions
+  title: Annual IT Security Awareness Training
+  type: module
+  module-id: questions
+output:
+- id: ssp_nist80053r4_AT_2
+  title: NIST 800-53r4 AT-2 Control Implementation
+  format: markdown
+  template: >+
+    {{questions.output_documents.ssp_nist80053r4_AT_2|safe}}
+
+- id: ssp_nist80053r4_AT_4
+  title: NIST 800-53r4 AT-4 Control Implementation
+  format: markdown
+  template: >+
+     {{questions.output_documents.ssp_nist80053r4_AT_4|safe}}
+
+- id: ssp_nist80053r4_SI_12
+  title: NIST 800-53r4 SI-12 Control Implementation
+  format: markdown
+  template: >+
+    {{questions.output_documents.ssp_nist80053r4_SI_12|safe}}

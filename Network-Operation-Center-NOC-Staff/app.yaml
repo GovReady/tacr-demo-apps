@@ -1,0 +1,75 @@
+id: app
+title: Network Operation Center (NOC) Staff
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/network-operation-center-(noc)-staff
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Network Operation Center (NOC) Staff
+    long: Generates compliance documentation of Network Operation Center (NOC) Staff
+      as it pertains to managing the security of CUI (Controlled Unclassified Information)
+      as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Network Operation Center (NOC) Staff monitor Department computer networks.
+
+    This application will make sure you are properly using Network Operation Center
+    (NOC) Staff to protect CUI (Controlled Unclassified Information) as per NIST 800-53r4
+    controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_PE_3
+  title: NIST 800-53r4 PE-3 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Network Operation Center (NOC) Staff to the organization:
+
+    a. Enforces physical access authorizations at [Assignment: organization-defined
+    entry/exit points to the facility where the information system resides] by;
+
+    a.1. Verifying individual access authorizations before granting access to the
+    facility; and
+
+    a.2. Controlling ingress/egress to the facility using [Selection (one or more):
+    [Assignment: organization-defined physical access control systems/devices]; guards];
+
+    b. Maintains physical access audit logs for [Assignment: organization-defined
+    entry/exit points];
+
+    c. Provides [Assignment: organization-defined security safeguards] to control
+    access to areas within the facility officially designated as publicly accessible;
+
+    d. Escorts visitors and monitors visitor activity [Assignment: organization-defined
+    circumstances requiring visitor escorts and monitoring];
+
+    e. Secures keys, combinations, and other physical access devices;
+
+    f. Inventories [Assignment: organization-defined physical access devices] every
+    [Assignment: organization-defined frequency]; and
+
+    g. Changes combinations and keys [Assignment: organization-defined frequency]
+    and/or when keys are lost, combinations are compromised, or individuals are transferred
+    or terminated. Network Operation Center (NOC) Staff monitor Department computer
+    networks.
+

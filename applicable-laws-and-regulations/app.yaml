@@ -1,0 +1,121 @@
+id: app
+title: TACR Applicable Laws and Regulations
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-ssp-text
+- govready.com/apps/compliance/2017/applicable-laws-and-regulations
+version: 0.5
+icon: app.png
+catalog:
+  category: Description
+  vendor: ContractorCo
+  vendor_url: http://www.ContractorCo.com
+  status: draft
+  version: 0.3
+  source_url: https://github.com/GovReady/ssp-via-govready/tree/master/out/generic/applicable-laws-and-regulations
+  description:
+    short: TACR Applicable Laws and Regulations
+    long: Generates the applicable laws and regulations page for TACR
+
+introduction:
+  format: markdown
+  template: >-
+    Generates the applicable laws and regulations page for TACR
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+
+output:
+- id: applicable_laws_and_regulations
+  title: TACR Applicable Laws and Regulations
+  format: markdown
+  template: >+
+    # Applicable Laws and Regulations
+
+
+    The following laws, regulations, or policies establish requirements for confidentiality, integrity, and availability for the TACR System. This document references the publications where appropriate.
+
+    **Federal Statutes**
+
+      * Federal Information Security Management Act of 2002 (FISMA)
+      * Federal Information Security Modernization Act of 2014 (FISMA 2014) 
+      * OMB Circular A-130, Management of Federal Information Resources
+
+
+    **Federal Standards and Guidelines**
+
+      * NIST Special Publication 500-293, Cloud Computing Standards and Technology Roadmap
+      * NIST Special Publication 800-37, Revision 1, Guide for Applying the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach, February 2010
+      * NIST Special Publication 800-53, Revision 4, Security Controls and Assessment Procedures for Federal Information Systems and Organizations (Low impact)
+      * NIST Special Publication 800-53A, Revision 1, Guide for Assessing the Security Controls in Federal Information Systems and Organizations, Building Effective Security Assessment Plans , June 2010
+      * NIST Special Publication 800-171, Protecting Controlled Unclassified Information in Nonfederal Information Systems and Organizations
+      * Section 508 of the Workforce Rehabilitation Act
+
+
+    **Department of Sobriety ACS Handbooks and Directives**
+
+      * Department of Sobriety Handbook for Information Assurance/Cybersecurity Policy  01 (2017)
+      * Department of Sobriety Handbook for Information Security Incident Response and Reporting Procedures  14
+
+
+    ## Unconfirmed, from 2013 SSP
+
+    _Review these for current versions and applicability_
+
+
+    **Federal Statutes**
+
+      * Information Technology Management Reform Act of 1996 (Clinger-Cohen Act), 44 U.S.C 3501
+      * Computer Fraud and Abuse Act of 1986, 17 U.S.C 1201
+      * Computer Security Act of 1987, 44 U.S.C 3504
+      * Paperwork Reduction Act, 44 U.S.C. Chapters 29 and 35
+      * Freedom of Information Act (FOIA), as amended, 5 U.S.C. 552
+      * Privacy Act of 1974, 5 U.S.C. 552a
+      * Trade Secrets Act
+      * Federal Records Act of 1950, as amended, 44 U.S.C. 2901
+      * Authority: Executive Branch Directives
+      * Homeland Security Presidential Directive 7
+      * Presidential Decision Directive 67 (PDD 67)
+
+
+    **Federal Standards and Guidelines**
+
+      * Federal Information Control Audit Manual (FISCAM)
+      * Federal Information Processing Standards Publications (FIPS PUBS) on IT Security
+      * NIST Special Publication 800-12, An Introduction to Computer Security: The NIST Handbook, October 1995
+      * NIST Special Publication 800-14, Generally Accepted Principles and Practices for Securing Information Technology Systems, September 1996
+      * NIST Special Publication 800-16, Information Technology Security Training Requirements: A Role- and Performance-Based Model (supersedes NIST Spec. Pub. 500-172), April 1998
+      * NIST Special Publication 800-18, Revision 1, Guide for Developing Security Plans for Information Technology Systems, February 2006
+      * NIST Special Publication 800-30, Risk Management Guide for Information Technology Systems, January 2002
+      * NIST Special Publication 800-34, Revision 1, Contingency Planning Guide for Federal Information Systems (Errata Page - Nov. 11, 2010), May 2010
+      * NIST Special Publication 800-35, Guide to Information Technology Security Services, October 2003
+      * NIST Special Publication 800-40, Version 2.0, Creating a Patch and Vulnerability Management Program, November 2005
+      * NIST Special Publication 800-41, Revision 1, Guidelines on Firewalls and Firewall Policy, September 2009
+      * NIST Special Publication 800-44, Version 2, Guidelines on Securing Public Web Servers, September 2007
+      * NIST Special Publication 800-47, Security Guide for Interconnecting Information Technology Systems, September 2002
+      * NIST Special Publication 800-50 Building an Information Technology Security Awareness Program, October 2003
+      * NIST Special Publication 800-55, Revision 1, Performance Measurement Guide for Information Security, July 2008
+      * NIST Special Publication 800-60, Volume 1, Revision 1, Guide for Mapping Types of Information and Information Systems to Security Categories, August 2008
+      * NIST Special Publication 800-60, Volume 2, Revision 1, Appendixes to Guide for Mapping Types of Information and Information Systems to Security Categories, August 2008
+      * NIST Special Publication 800-61, Revision 1, Computer Security Incident Handling Guide, March 2008
+      * NIST Special Publication 800-64, Revision 2 Security Considerations in the System Development Life Cycle, October 2008
+      * NIST Special Publication 800-115, Technical Guide to Information Security Testing and Assessment, September 2008
+
+
+    **Department of Sobriety ACS Handbooks and Directives**
+
+      * Handbook No. 11, Personnel Security-Suitability
+      * Department of Sobriety Guide Material for Information Technology Security Policy
+      * Department of Sobriety Handbook for Information Technology Facility Physical Security Policy
+      * Department of Sobriety Guide Material for Information Technology Security General Support System and Major Application Inventory Procedures
+      * Department of Sobriety Certification and Accreditation Program Overview
+      * Department of Sobriety Guide Material for Information Technology Security Configuration Management Procedures
+      * Department of Sobriety Guide Material for Information Technology Security Contingency Planning Procedures
+      * Department of Sobriety Information Technology Security Test and Evaluation Plan Guide
+      * Department of Sobriety Information Technology Security Controls Reference Guide
+      * Department of Sobriety Incident Handling Program Overview
+      * Department of Sobriety Information Technology Security Training and Awareness Program Plan
+      * Department of Sobriety Information Technology Security System Development Lifecycle Guide

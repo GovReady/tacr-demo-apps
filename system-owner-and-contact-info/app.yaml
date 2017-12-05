@@ -1,0 +1,122 @@
+id: app
+title: TACR System Owner and Contact Info
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-ssp-text
+- govready.com/apps/compliance/2017/system-owner-and-contact-info
+version: 0.5
+icon: app.png
+catalog:
+  category: Description
+  vendor: ContractorCo
+  vendor_url: http://www.ContractorCo.com
+  status: draft
+  version: 0.3
+  source_url: https://github.com/GovReady/ssp-via-govready/tree/master/out/generic/system-owner-and-contact-info
+  description:
+    short: System owner and contact info for TACR
+    long: Generates the system owner and contact info description for TACR
+
+introduction:
+  format: markdown
+  template: >-
+    Generates the system owner and contact info description for TACR
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+
+output:
+- id: system_owner_and_contact_info
+  title: TACR System Owner and Contact Info
+  format: markdown
+  template: >+
+    ## System Owner and Contact Information
+
+    <h3>System Owner</h3>
+
+    <center>
+    <table>
+    <thead>
+      <tr><td> Name     </td><td> REDACTED                  </td></tr>
+    </thead>
+    <tbody>
+      <tr><td> Title    </td><td> Contract Officers Representative </td></tr>
+      <tr><td> Role     </td><td> System Owner                     </td></tr>
+      <tr><td> Address  </td><td> REDACTED </td></tr>
+      <tr><td> Telephone</td><td> REDACTED                  </td></tr>
+      <tr><td> Email    </td><td> REDACTED    </td></tr>
+    </tbody>
+    </table>
+    </center>
+
+    <h3>Authorizing Official/Designated Approving Authority</h3>
+
+    <center>
+    <table>
+    <thead>
+      <tr><td> Name     </td><td> REDACTED            </td></tr>
+    </thead>
+    <tbody>
+      <tr><td> Title    </td><td> Executive Officer              </td></tr>
+      <tr><td> Role     </td><td> Authorizing Official           </td></tr>
+      <tr><td> Address  </td><td> REDACTED </td></tr>
+      <tr><td> Telephone</td><td> REDACTED                </td></tr>
+      <tr><td> Email    </td><td> REDACTED   </td></tr>
+    </tbody>
+    </table>
+    </center>
+
+    <h3>Other Designated Contacts</h3>
+
+    <center>
+    <table>
+    <thead>
+      <tr><td> Name     </td><td> REDACTED                                   </td></tr>
+    </thead>
+    <tbody>
+      <tr><td> Title    </td><td> Deputy Director, Division of Industry Improvement </td></tr>
+      <tr><td> Role     </td><td> Alternative Point of Contact                              </td></tr>
+      <tr><td> Address  </td><td> REDACTED       </td></tr>
+      <tr><td> Telephone</td><td> REDACTED                                        </td></tr>
+      <tr><td> Email    </td><td> REDACTED                           </td></tr>
+    </tbody>
+    </table>
+    </center>
+
+    <h3>Assignment of Security Responsibility</h3>
+
+    <center>
+    <table>
+    <thead>
+      <tr><td> Name     </td><td> REDACTED                        </td></tr>
+    </thead>
+    <tbody>
+      <tr><td> Title    </td><td> IT Specialist                               </td></tr>
+      <tr><td> Role     </td><td> Information Systems Security Officer (ISSO) </td></tr>
+      <tr><td> Address  </td><td> REDACTED </td></tr>
+      <tr><td> Telephone</td><td> REDACTED                             </td></tr>
+      <tr><td> Email    </td><td> REDACTED             </td></tr>
+    </tbody>
+    </table>
+    </center>
+
+    <p>&nbsp</p>
+
+    <center>
+    <table>
+    <thead>
+      <tr><td> Name     </td><td> REDACTED                                       </td></tr>
+    </thead>
+    <tbody>
+      <tr><td> Title    </td><td> Chief Information Security Officer, ContractorCo  </td></tr>
+      <tr><td> Role     </td><td> System Security Officer (SSO)                     </td></tr>
+      <tr><td> Address  </td><td> REDACTED </td></tr>
+      <tr><td> Telephone</td><td> REDACTED                                 </td></tr>
+      <tr><td> Email    </td><td> REDACTED            </td></tr>
+    </tbody>
+    </table>
+    </center>
+

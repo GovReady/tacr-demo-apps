@@ -1,0 +1,76 @@
+id: app
+title: DoSob Handbook –14
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/dosob-handbook--14
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of DoSob Handbook –14
+    long: Generates compliance documentation of DoSob Handbook –14 as it pertains
+      to managing the security of CUI (Controlled Unclassified Information) as per
+      NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Department of Sobriety Handbook -14 documents and sets forth the Department
+    incident response and reporting procedures.
+
+    This application will make sure you are properly using DoSob Handbook –14 to
+    protect CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_IR_1
+  title: NIST 800-53r4 IR-1 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses DoSob Handbook –14 to the organization:
+
+    a. Develops, documents, and disseminates to [Assignment: organization-defined
+    personnel or roles]:
+
+    a.1. An incident response policy that addresses purpose, scope, roles, responsibilities,
+    management commitment, coordination among organizational entities, and compliance;
+    and
+
+    a.2. Procedures to facilitate the implementation of the incident response policy
+    and associated incident response controls; and
+
+    b. Reviews and updates the current:
+
+    b.1. Incident response policy [Assignment: organization-defined frequency]; and
+
+    b.2. Incident response procedures [Assignment: organization-defined frequency].
+    Department of Sobriety Handbook -14 documents and sets forth the Department
+    incident response and reporting procedures.
+
+- id: ssp_nist80053r4_SC_5
+  title: NIST 800-53r4 SC-5 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses DoSob Handbook –14 to the information system protects
+    against or limits the effects of the following types of denial of service attacks:
+    [Assignment: organization-defined types of denial of service attacks or references
+    to sources for such information] by employing [Assignment: organization-defined
+    security safeguards]. Department of Sobriety Handbook -14 documents and sets
+    forth the Department incident response and reporting procedures.
+

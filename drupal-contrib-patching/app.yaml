@@ -1,0 +1,49 @@
+id: app
+title: WordPress Contrib Patching
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-ssp-text
+- govready.com/apps/compliance/2017/drupal-contrib-patching
+version: 0.5
+icon: app.png
+catalog:
+  category: Description
+  vendor: ContractorCo
+  vendor_url: http://www.ContractorCo.com
+  status: draft
+  version: 0.3
+  source_url: https://github.com/GovReady/ssp-via-govready/tree/master/out/generic/drupal-contrib-patching
+  description:
+    short: WordPress Contrib Patching for TACR
+    long: Generates the WordPress Contrib Patching for TACR
+
+introduction:
+  format: markdown
+  template: >-
+    Generates the WordPress Contrib Patching for TACR
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: drupal_contrib_patching
+  title: WordPress Contrib Patching
+  format: markdown
+  template: >+
+    # WordPress: Patching Contributed Modules
+
+    When there are issues with contributed modules the WordPress community contributes patches to try to address the issues.
+
+
+    Modules may be patched for a number of reasons.
+
+
+      1. Repairs to existing bugs
+      2. Additional features requested but not accepted as the desired path for the module.
+      3. Customizations needed to accommodate the site needs that are not a benefit to be contributed back.
+
+
+
+    In any of these cases, the patches will be applied to module as needed.  To make record keeping and patch management consistent, the sites use a patches.make file that lists the patches and the modules they apply to.  A bowline command `patch-contrib` applies the patches to the latest version of the module and adds an appropriate patches.txt to each module that has been patched.  This method is a reliable method to rapidly apply patches to updated modules.

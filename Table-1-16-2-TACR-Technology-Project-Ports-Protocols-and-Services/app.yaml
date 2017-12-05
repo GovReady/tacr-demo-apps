@@ -1,0 +1,58 @@
+id: app
+title: 'Table 1.16–2, TACR System: Ports, Protocols and Services'
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/table-1.16–2,-lincs-technology-project:-ports,-protocols-and-services
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: 'CUI (NIST 800-53r4) Compliance of Table 1.16–2, TACR System:
+      Ports, Protocols and Services'
+    long: 'Generates compliance documentation of Table 1.16–2, TACR System:
+      Ports, Protocols and Services as it pertains to managing the security of CUI
+      (Controlled Unclassified Information) as per NIST 800-53r4 controls.'
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Table 1.16–2, TACR System: Ports, Protocols and Services is an inventory
+    of settings of ports, protocols and operating services of TACR.
+
+    This application will make sure you are properly using Table 1.16–2, TACR Technology
+    Project: Ports, Protocols and Services to protect CUI (Controlled Unclassified
+    Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_CM_7
+  title: NIST 800-53r4 CM-7 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Table 1.16–2, TACR System: Ports, Protocols
+    and Services to the organization:
+
+    a. Configures the information system to provide only essential capabilities; and
+
+    b. Prohibits or restricts the use of the following functions, ports, protocols,
+    and/or services: [Assignment: organization-defined prohibited or restricted functions,
+    ports, protocols, and/or services]. Table 1.16–2, TACR System: Ports,
+    Protocols and Services is an inventory of settings of ports, protocols and operating
+    services of TACR.
+

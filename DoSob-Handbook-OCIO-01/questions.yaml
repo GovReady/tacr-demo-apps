@@ -1,0 +1,119 @@
+id: questions
+title: Questions about the Handbook for Information Assurance Security Policy, Information Assurance Program (Handbook XX)
+
+questions:
+- id: document_url_exists
+  title:  Handbook URL exists?
+  prompt: Does the Handbook for Information Assurance Security Policy, Information Assurance Program (Handbook XX) exist at a URL?
+  type: yesno
+
+- id: document_url
+  title: Handbook URL
+  prompt: What is the URL for the Handbook for Information Assurance Security Policy, Information Assurance Program (Handbook XX)?
+  type: url
+  ask-first:
+    - document_url_exists
+  impute:
+    - condition: document_url_exists == 'no'
+      value: ~
+
+- id: security_awareness_and_training_policies_review_frequency
+  title: Policy review frequency
+  prompt: How often is the security awareness and training policy reviewed?
+  type: choice
+  choices:
+    - key: monthly
+      text: monthly
+    - key: quarterly
+      text: quarterly
+    - key: semi-annually
+      text: semi-annually
+    - key: annually
+      text: annually
+    - key: bi-annually
+      text: bi-annually
+
+- id: security_awareness_and_training_procedures_review_frequency
+  title: Proceedures review frequency
+  prompt: How often are the security awareness and training proceedures reviewed?
+  type: choice
+  choices:
+    - key: monthly
+      text: monthly
+    - key: quarterly
+      text: quarterly
+    - key: semi-annually
+      text: semi-annually
+    - key: annually
+      text: annually
+    - key: bi-annually
+      text: bi-annually
+
+- id: role_based_security_training_documented
+  title:  Role-based security training documented
+  prompt: Does the Handbook for Information Assurance Security Policy, Information Assurance Program (Handbook XX) document role-based security training?
+  type: yesno
+
+- id: system_admin_security_training_documented
+  title:  System admin security training documented
+  prompt: Does the role-based training in the Handbook for Information Assurance Security Policy, Information Assurance Program (Handbook XX) document training for system administrators?
+  type: yesno
+  ask-first:
+    - role_based_security_training_documented
+  impute:
+  - condition: role_based_security_training_documented == 'no'
+    value: ~
+
+- id: system_admin_security_training_examples
+  title: System adminsecurity training examples
+  prompt: Which of the following topics are covered by the System administrators training?
+  type: multiple-choice
+  choices:
+    - key: password_protection
+      text: Password protection
+    - key: rules_of_behavior
+      text: System rules of behavior
+    - key: protection_of_hardware_software_data
+      text: Protection of hardware, software, and data
+    - key: proper_handling_copyright
+      text: Proper handling of copyrighted materials
+    - key: report_security_breaches
+      text: Reporting of security breaches and violations
+    - key: proper_procedures_software_workstations
+      text: Proper procedures for software installation, uploading, and use on workstations
+  ask-first:
+    - system_admin_security_training_documented
+  impute:
+    - condition: system_admin_security_training_documented == 'no'
+      value: ~
+
+output:
+- id: ssp_nist80053r4_AT_1
+  title: NIST 800-53r4 AT-1 Control Implementation
+  format: markdown
+  template: "{{organization}} formally documents security awareness and training policy and procedures in
+    Department of Sobriety, Office of the Chief Information Officer, Handbook for
+    Information Assurance Security Policy, Information Assurance Program (Handbook XX).
+    This Handbook provides security awareness and training policy that addresses purpose,
+    scope, roles, responsibilities, management commitment, how the Department of Ed
+    entities coordinate related activities and tracking of compliance by staff. 
+      The Department of Sobriety reviews and updates the current security
+      awareness and training policy {{security_awareness_and_training_policies_review_frequency}}. 
+      The Department reviews and updates the current security awareness and training procedures
+      {{security_awareness_and_training_procedures_review_frequency}}.
+      {% if document_url_exists %}Handbook XX is available at {{document_url}}.{% endif %}"
+
+- id: ssp_nist80053r4_AT_3
+  title: NIST 800-53r4 AT-3 Control Implementation
+  format: markdown
+  template: >+
+    Section 4.9 of the Department of Sobriety, Office of the Chief Information Officer,
+    Handbook for Information Assurance Security Policy, Information Assurance Program (Handbook XX)
+    documents roles with significant security responsibilities. All employees are required to complete
+    annual IT security awareness training as well.
+    {% if role_based_security_training_documented %} This security awareness training covers issues and policies associated with
+    information security, including end user security roles and responsibilities and rules of behavior.{% endif %}
+    {% if system_admin_security_training_documented %}
+    System administrators receive specific security training for the platforms they are responsible for.{% endif %}
+    {% if system_admin_security_training_documented and system_admin_security_training_examples %}Some topics addressed in the system administrators training are: {{system_admin_security_training_examples.text}}.
+    {% endif %}

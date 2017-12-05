@@ -1,0 +1,73 @@
+id: app
+title: TACR Access Control Policy
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-ssp-text
+- govready.com/apps/compliance/2017/tacr-access-control-policy
+version: 0.5
+icon: app.png
+
+catalog:
+  category: Policy
+  vendor: ContractorCo
+  vendor_url: http://www.ContractorCo.com
+  status: draft
+  version: 0.3
+  source_url: https://github.com/GovReady/ssp-via-govready/tree/master/out/generic/access-control-policy
+  description:
+    short: TACR Access Control Policy
+    long: TACR Access Control Policy
+
+introduction:
+  format: markdown
+  template: >-
+    Generates the TACR Access Control Policy
+
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+
+output:
+- id: lincs-access-control-policy
+  title: TACR Access Control Policy
+  format: markdown
+  template: >+
+    # TACR Access Control Policy
+
+    ## Purpose
+    Access controls are the rules that an organization applies in order to control access to its information assets. The risks of using inadequate access controls range from inconvenience to critical loss or corruption of data. This policy defines access control standards for system use notices, remote access, and definition and documentation of trust relationships for the TACR General Purpose Systems.
+
+    ## Scope
+    This policy applies to all users, intstructors, event developers, TACR staff and supporting contractors that use TACR resources for educational purposes and/or to create, access, store or manage TACR information systems, events, and communities as part of their educational or business functions.
+
+    ## Effective Date
+    This policy became effective on February 6, 2016.
+
+    ## Policy
+    Access control standards for TACR General Purpose Systems are to be established in a manner that carefully balances restrictions that prevent unauthorized access to information and services against the need for unhindered access for general and authorized users.
+
+    * **System use notice** - When privileged system admins connect via SSH or VPN to a TACR instance, a system use notice must be displayed containing this text:
+
+    > This is a Federal Agency computer that is the property of the United
+    > States Government. It is for authorized use only. To protect the
+    > system from unauthorized use and to ensure that the system is
+    > functioning properly, activities on this system are monitored and
+    > recorded and subject to audit. Use of this system is expressed
+    > consent to such monitoring and recording. Any unauthorized access or
+    > use of this Automated Information System is prohibited and could be
+    > subject to criminal and civil penalties.
+
+    > By continuing to use this system you indicate your awareness of and
+    > consent to these terms and conditions of use.
+
+    ## Least Privilege
+    The Access Control Policy enforces *Least Privilege* by ensuring that users within a particular role have access to the resources they need and are refused access to resources that are not required for their use case.
+
+    ## Roles and Responsibilities
+    * User roles are defined in the [System Identification](blank.md).
+    * The TACR Information System Security Officer (ISSO) is responsible for developing guidance on documentation and mechanisms to ensure least privilege access.
+
+

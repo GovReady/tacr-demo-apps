@@ -1,0 +1,65 @@
+id: app
+title: Secure Shell (SSH)
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/secure-shell-(ssh)
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Secure Shell (SSH)
+    long: Generates compliance documentation of Secure Shell (SSH) as it pertains
+      to managing the security of CUI (Controlled Unclassified Information) as per
+      NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Secure Shell (SSH) is a cryptographic network protocol for operating network services
+    securely over an unsecured network (Wikipedia).
+
+    This application will make sure you are properly using Secure Shell (SSH) to protect
+    CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_AC_17
+  title: NIST 800-53r4 AC-17 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Secure Shell (SSH) to the organization:
+
+    a. Establishes and documents usage restrictions, configuration/connection requirements,
+    and implementation guidance for each type of remote access allowed; and
+
+    b. Authorizes remote access to the information system prior to allowing such connections.
+    Secure Shell (SSH) is a cryptographic network protocol for operating network services
+    securely over an unsecured network (Wikipedia).
+
+- id: ssp_nist80053r4_SC_13
+  title: NIST 800-53r4 SC-13 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Secure Shell (SSH) to the information system implements
+    [Assignment: organization-defined cryptographic uses and type of cryptography
+    required for each use] in accordance with applicable federal laws, Executive Orders,
+    directives, policies, regulations, and standards. Secure Shell (SSH) is a cryptographic
+    network protocol for operating network services securely over an unsecured network
+    (Wikipedia).
+

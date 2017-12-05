@@ -1,0 +1,49 @@
+id: app
+title: Principal Offices
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/principal-offices
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Principal Offices
+    long: Generates compliance documentation of Principal Offices as it pertains to
+      managing the security of CUI (Controlled Unclassified Information) as per NIST
+      800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Principal Offices are business units within the Department.
+
+    This application will make sure you are properly using Principal Offices to protect
+    CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_PM_8
+  title: NIST 800-53r4 PM-8 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Principal Offices to the organization addresses information
+    security issues in the development, documentation, and updating of a critical
+    infrastructure and key resources protection plan. Principal Offices are business
+    units within the Department.
+

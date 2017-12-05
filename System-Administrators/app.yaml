@@ -1,0 +1,104 @@
+id: app
+title: System Administrators
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/system-administrators
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: draft
+  version: 0.3
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of System Administrators
+    long: Generates compliance documentation of System Administrators as it pertains
+      to managing the security of CUI (Controlled Unclassified Information) as per
+      NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    The System Administrators are individuals with responsible for the upkeep, configuration,
+    and reliable operation of the information system.
+
+    This application will make sure you are properly using System Administrators to
+    protect CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: system_administrators
+  title: System Administrators Module
+  type: module
+  module-id: system_administrators
+
+output:
+- id: ssp_nist80053r4_AC_2
+  title: NIST 800-53r4 AC-2 Account Management
+  format: markdown
+  template: >+
+    The System Administrators are responsible for implementing and managing user accounts and access rights. {The System Administrators create implement user accounts and access rights according to New User Account Request form.}
+
+- id: ssp_nist80053r4_MA_2
+  title: NIST 800-53r4 MA-2 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses System Administrators to the organization:
+
+    a. Schedules, performs, documents, and reviews records of maintenance and repairs
+    on information system components in accordance with manufacturer or vendor specifications
+    and/or organizational requirements;
+
+    b. Approves and monitors all maintenance activities, whether performed on site
+    or remotely and whether the equipment is serviced on site or removed to another
+    location;
+
+    c. Requires that [Assignment: organization-defined personnel or roles] explicitly
+    approve the removal of the information system or system components from organizational
+    facilities for off-site maintenance or repairs;
+
+    d. Sanitizes equipment to remove all information from associated media prior to
+    removal from organizational facilities for off-site maintenance or repairs;
+
+    e. Checks all potentially impacted security controls to verify that the controls
+    are still functioning properly following maintenance or repair actions; and
+
+    f. Includes [Assignment: organization-defined maintenance-related information]
+    in organizational maintenance records. The System Administrators are individuals
+    with responsible for the upkeep, configuration, and reliable operation of the
+    information system.
+
+- id: ssp_nist80053r4_MA_4
+  title: NIST 800-53r4 MA-4 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses System Administrators to the organization:
+
+    a. Approves and monitors nonlocal maintenance and diagnostic activities;
+
+    b. Allows the use of nonlocal maintenance and diagnostic tools only as consistent
+    with organizational policy and documented in the security plan for the information
+    system;
+
+    c. Employs strong authenticators in the establishment of nonlocal maintenance
+    and diagnostic sessions;
+
+    d. Maintains records for nonlocal maintenance and diagnostic activities; and
+
+    e. Terminates session and network connections when nonlocal maintenance is completed.
+    The System Administrators are individuals with responsible for the upkeep, configuration,
+    and reliable operation of the information system.
+
+- id: ssp_nist80053r4_SC_14
+  title: NIST 800-53r4 SC-14 Control Implementation
+  format: markdown
+  template: |+
+    {{organization}} uses System Administrators to none The System Administrators are individuals with responsible for the upkeep, configuration, and reliable operation of the information system.
+

@@ -1,0 +1,51 @@
+id: app
+title: Department of Sobriety Guidelines
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/department-of-education-guidelines
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Department of Sobriety Guidelines
+    long: Generates compliance documentation of Department of Sobriety Guidelines
+      as it pertains to managing the security of CUI (Controlled Unclassified Information)
+      as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Department of Sobriety Guidelines set forth the standards determining various
+    requirements of information systems.
+
+    This application will make sure you are properly using Department of Sobriety
+    Guidelines to protect CUI (Controlled Unclassified Information) as per NIST 800-53r4
+    controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_IA_2
+  title: NIST 800-53r4 IA-2 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Department of Sobriety Guidelines to the information system
+    uniquely identifies and authenticates organizational users (or processes acting
+    on behalf of organizational users). Department of Sobriety Guidelines set forth
+    the standards determining various requirements of information systems.
+

@@ -1,0 +1,94 @@
+id: app
+title: TACR Acronyms
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/tacr-ssp-text
+- govready.com/apps/compliance/2017/acronyms
+version: 0.5
+icon: app.png
+catalog:
+  category: Description
+  vendor: ContractorCo
+  vendor_url: http://www.ContractorCo.com
+  status: draft
+  version: 0.3
+  source_url: https://github.com/GovReady/ssp-via-govready/tree/master/out/generic/
+  description:
+    short: Acronyms for TACR
+    long: Generates the acronyms page for TACR
+
+introduction:
+  format: markdown
+  template: >-
+    Generates the acronyms page for TACR
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+
+output:
+- id: acronyms
+  title: Acronyms used in the TACR Project
+  format: markdown
+  template: >+
+    # Acronyms used in the TACR Project
+    
+
+    <table dir="auto">
+      <thead>
+        <tr><th>Acronym</th><th>Meaning</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>AWS</td><td>Amazon Wed Services</td></tr>
+        <tr><td>C&A</td><td>Certification and Accreditation</td></tr>
+        <tr><td>CIRC</td><td>Computer Security Incident Response Capability</td></tr>
+        <tr><td>COTS</td><td>Commercial Off- the-Shelf Software</td></tr>
+        <tr><td>CMP</td><td>Configuration Management Plan</td></tr>
+        <tr><td>CSAM</td><td>Cyber Security Assessment and Management</td></tr>
+        <tr><td>CVE</td><td>Common Vulnerabilities and Exposure</td></tr>
+        <tr><td>DBA</td><td>Database Administrator</td></tr>
+        <tr><td>DoED</td><td>Department of Sobriety</td></tr>
+        <tr><td>DoS</td><td>Denial of Service</td></tr>
+        <tr><td>DAA</td><td>Designated Approving Authority</td></tr>
+        <tr><td>ELC</td><td>Enterprise Life Cycle</td></tr>
+        <tr><td>EDCIRC</td><td>The Department Computer Incident Response Capability</td></tr>
+        <tr><td>GSS</td><td>General Support System</td></tr>
+        <tr><td>FAR</td><td>Federal Acquisition Regulation</td></tr>
+        <tr><td>FedRAMP</td><td>Federal Risk and Authorization Management Program</td></tr>
+        <tr><td>FIPS</td><td>Federal Information Processing Standard</td></tr>
+        <tr><td>FISCAM</td><td>Federal Information Control Audit Manual</td></tr>
+        <tr><td>FISMA</td><td>Federal Information Security Management Act</td></tr>
+        <tr><td>FOIA</td><td>Freedom of Information Act</td></tr>
+        <tr><td>HIDS</td><td>Host Intrusion Detection Software</td></tr>
+        <tr><td>IDS</td><td>Intrusion Detection Software</td></tr>
+        <tr><td>ISSO</td><td>Information System Security Officer</td></tr>
+        <tr><td>ISSP</td><td>Information System Security Policy</td></tr>
+        <tr><td>IRP</td><td>Incident Response Plan</td></tr>
+        <tr><td>GSMX</td><td>REDACTED(a contractor)</td></tr>
+        <tr><td>NIST</td><td>National Institute of Standards and Technology</td></tr>
+        <tr><td>NCC</td><td>National Classification Center</td></tr>
+        <tr><td>NOC</td><td>Network Operation Center</td></tr>
+        <tr><td>NLA</td><td>National sobriety Act</td></tr>
+        <tr><td>SOD</td><td>Office of Special Details</td></tr>
+        <tr><td>OCIO</td><td>Office of the Chief Information Officer</td></tr>
+        <tr><td>OMB</td><td>Office of Management and Budget</td></tr>
+        <tr><td>OPM</td><td>Office of Personnel and Management</td></tr>
+        <tr><td>POA&M</td><td>Plan of Action and Milestone</td></tr>
+        <tr><td>PKI</td><td>Public Key Infrastructure</td></tr>
+        <tr><td>POC</td><td>Point of Contact</td></tr>
+        <tr><td>SILK</td><td>REDACTED</td></tr>
+        <tr><td>RMF</td><td>Risk Management Framework</td></tr>
+        <tr><td>SCAP</td><td>Security Content Automation Protocol</td></tr>
+        <tr><td>SDLC</td><td>System Development Lifecycle</td></tr>
+        <tr><td>SP</td><td>Special Publication</td></tr>
+        <tr><td>SPD</td><td>Standard Position Description</td></tr>
+        <tr><td>SSH</td><td>Secure Shell</td></tr>
+        <tr><td>SSP</td><td>System Security Plan</td></tr>
+        <tr><td>ST&E</td><td>Security Test and Evaluation</td></tr>
+        <tr><td>STIG</td><td>Security Technical Implementation Guide</td></tr>
+        <tr><td>TACR</td><td>Tactical Attitude Conversion Result</td></tr>
+        <tr><td>WIOA</td><td>Workforce Innovation and Opportunity Act</td></tr>
+      </tbody>
+    </table>

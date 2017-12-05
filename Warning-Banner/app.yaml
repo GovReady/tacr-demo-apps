@@ -1,0 +1,80 @@
+id: app
+title: Warning Banner
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/warning-banner
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Warning Banner
+    long: Generates compliance documentation of Warning Banner as it pertains to managing
+      the security of CUI (Controlled Unclassified Information) as per NIST 800-53r4
+      controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    A Warning Banner is a message displayed during login notifying unauthorized users
+    that they have accessed a U.S. Government computer system and unauthorized use
+    can be punished by fines or imprisonment.
+
+    This application will make sure you are properly using Warning Banner to protect
+    CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_AC_8
+  title: NIST 800-53r4 AC-8 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Warning Banner to the information system:
+
+    a. Displays to users [Assignment: organization-defined system use notification
+    message or banner] before granting access to the system that provides privacy
+    and security notices consistent with applicable federal laws, Executive Orders,
+    directives, policies, regulations, standards, and guidance and states that:
+
+    a.1. Users are accessing a U.S. Government information system;
+
+    a.2. Information system usage may be monitored, recorded, and subject to audit;
+
+    a.3. Unauthorized use of the information system is prohibited and subject to criminal
+    and civil penalties; and
+
+    a.4. Use of the information system indicates consent to monitoring and recording;
+
+    b. Retains the notification message or banner on the screen until users acknowledge
+    the usage conditions and take explicit actions to log on to or further access
+    the information system; and
+
+    c. For publicly accessible systems:
+
+    c.1. Displays system use information [Assignment: organization-defined conditions],
+    before granting further access;
+
+    c.2. Displays references, if any, to monitoring, recording, or auditing that are
+    consistent with privacy accommodations for such systems that generally prohibit
+    those activities; and
+
+    c.3. Includes a description of the authorized uses of the system. A Warning Banner
+    is a message displayed during login notifying unauthorized users that they have
+    accessed a U.S. Government computer system and unauthorized use can be punished
+    by fines or imprisonment.
+

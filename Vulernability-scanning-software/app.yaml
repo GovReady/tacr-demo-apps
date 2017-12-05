@@ -1,0 +1,74 @@
+id: app
+title: Vulernability scanning software
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/vulernability-scanning-software
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Vulernability scanning software
+    long: Generates compliance documentation of Vulernability scanning software as
+      it pertains to managing the security of CUI (Controlled Unclassified Information)
+      as per NIST 800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    Vulernability scanning software is software that systematically examines a system
+    for known weaknesses and incorrect configuration.
+
+    This application will make sure you are properly using Vulernability scanning
+    software to protect CUI (Controlled Unclassified Information) as per NIST 800-53r4
+    controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_RA_5
+  title: NIST 800-53r4 RA-5 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Vulernability scanning software to the organization:
+
+    a. Scans for vulnerabilities in the information system and hosted applications
+    [Assignment: organization-defined frequency and/or randomly in accordance with
+    organization-defined process] and when new vulnerabilities potentially affecting
+    the system/applications are identified and reported;
+
+    b. Employs vulnerability scanning tools and techniques that facilitate interoperability
+    among tools and automate parts of the vulnerability management process by using
+    standards for:
+
+    b.1. Enumerating platforms, software flaws, and improper configurations;
+
+    b.2. Formatting checklists and test procedures; and
+
+    b.3. Measuring vulnerability impact;
+
+    c. Analyzes vulnerability scan reports and results from security control assessments;
+
+    d. Remediates legitimate vulnerabilities [Assignment: organization-defined response
+    times] in accordance with an organizational assessment of risk; and
+
+    e. Shares information obtained from the vulnerability scanning process and security
+    control assessments with [Assignment: organization-defined personnel or roles]
+    to help eliminate similar vulnerabilities in other information systems (i.e.,
+    systemic weaknesses or deficiencies). Vulernability scanning software is software
+    that systematically examines a system for known weaknesses and incorrect configuration.
+

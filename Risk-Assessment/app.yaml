@@ -1,0 +1,64 @@
+id: app
+title: Risk Assessment
+type: project
+protocol:
+- govready.com/apps/compliance/2017/nist-sp-800-53-r4-ssp
+- govready.com/apps/compliance/2017/risk-assessment
+version: 0.5
+icon: app.png
+catalog:
+  category: Technology
+  vendor: GovReady
+  vendor_url: http://www.govready.com
+  status: stub
+  version: 0.2
+  source_url: https://github.com/GovReady/test-making-apps-from-matrix/tree/master/out/generic/AWS-Glacier-Backup
+  description:
+    short: CUI (NIST 800-53r4) Compliance of Risk Assessment
+    long: Generates compliance documentation of Risk Assessment as it pertains to
+      managing the security of CUI (Controlled Unclassified Information) as per NIST
+      800-53r4 controls.
+  recommended_for:
+  - key_short: Org
+    value: Small
+  - key_short: Tech
+    value: Sophisticated
+  - key_short: Role
+    value: SysAdmin
+introduction:
+  format: markdown
+  template: >-
+    A Risk Assessment is a systematic evaluation of potential risks.
+
+    This application will make sure you are properly using Risk Assessment to protect
+    CUI (Controlled Unclassified Information) as per NIST 800-53r4 controls.
+questions:
+- id: example
+  title: Example Module
+  type: module
+  module-id: example
+output:
+- id: ssp_nist80053r4_RA_3
+  title: NIST 800-53r4 RA-3 Control Implementation
+  format: markdown
+  template: >+
+    {{organization}} uses Risk Assessment to the organization:
+
+    a. Conducts an assessment of risk, including the likelihood and magnitude of harm,
+    from the unauthorized access, use, disclosure, disruption, modification, or destruction
+    of the information system and the information it processes, stores, or transmits;
+
+    b. Documents risk assessment results in [Selection: security plan; risk assessment
+    report; [Assignment: organization-defined document]];
+
+    c. Reviews risk assessment results [Assignment: organization-defined frequency];
+
+    d. Disseminates risk assessment results to [Assignment: organization-defined personnel
+    or roles]; and
+
+    e. Updates the risk assessment [Assignment: organization-defined frequency] or
+    whenever there are significant changes to the information system or environment
+    of operation (including the identification of new threats and vulnerabilities),
+    or other conditions that may impact the security state of the system. A Risk Assessment
+    is a systematic evaluation of potential risks.
+
