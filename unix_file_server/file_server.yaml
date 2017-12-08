@@ -98,6 +98,12 @@ questions:
       - condition: network_segmentation == 'yes'
         value: ~
    
+  - id: port_scan_output
+    title: Port Scan Outut
+    type: longtext
+    prompt: |
+      Paste the output of a port scan of {{hostname}} showing which ports are open.
+
   - id: login_message
     title: Login Message
     type: longtext

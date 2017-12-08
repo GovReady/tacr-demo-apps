@@ -1047,6 +1047,13 @@ output:
     The report can be [downloaded here]({{project.file_server.file_server.scap_scan_report.url}}).
     {% endif %}
 
+    {% if project.file_server and project.file_server.file_server.port_scan_output %}
+    A port scan was performed on the system (hostname {{project.file_server.file_server.hostname}}).
+    The scan determined that the following ports are open:
+
+    {{project.file_server.file_server.port_scan_output}}
+    {% endif %}
+
     **Control Type:** System Specific
 
 
