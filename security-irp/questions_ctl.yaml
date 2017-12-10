@@ -42,6 +42,7 @@ questions:
 
 - id: document_location_type
   title: Location of Plan
+  prompt: Where is the plan located?
   type: choice
   choices:
     - key: url
