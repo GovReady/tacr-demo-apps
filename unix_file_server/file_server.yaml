@@ -99,7 +99,7 @@ questions:
         value: ~
    
   - id: port_scan_output
-    title: Port Scan Outut
+    title: Port Scan Output
     type: longtext
     prompt: |
       Paste the output of a port scan of {{hostname}} showing which ports are open.
