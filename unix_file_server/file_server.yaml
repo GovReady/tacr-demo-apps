@@ -104,6 +104,11 @@ questions:
     prompt: |
       Paste the output of a port scan of {{hostname}} showing which ports are open.
 
+  - id: port_scan_ok
+    title: Port Scan Ok?
+    type: yesno
+    prompt: Did the port scan indicate the system's open ports are in compliance?
+
   - id: login_message
     title: Login Message
     type: longtext
