@@ -25,6 +25,9 @@ output:
       th, td { padding: 15px; text-align: left;}
     </style>
 
+    {% if project.file_server and project.file_server.file_server.port_scan_ok == 'yes' %}
+    <h2 style="position: fixed;background-color: #4B0;color: white;margin-left: -15px;padding: .5em;">COMPLIANCE CHECKS PASSED.</h2>
+    {% endif %}
     {% if project.file_server and project.file_server.file_server.port_scan_ok == 'no' %}
     <h2 style="position: fixed;background-color: #D44;color: white;margin-left: -15px;padding: .5em;">COMPLIANCE ISSUE IDENTIFIED. PLEASE REVIEW PORT SCAN.</h2>
     {% endif %}
