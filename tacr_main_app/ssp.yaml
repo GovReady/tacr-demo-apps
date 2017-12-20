@@ -1049,19 +1049,6 @@ output:
 
     The TACR System is configured in compliance with the applicable baseline security standards. The Department and its technical support staff configure the security settings of all IT products to the most restrictive mode consistent with information system operational requirements. The Department utilizes the NIST Special Publication 800-70 for guidance on configuration settings (checklists) for information technology products. When security setting checklist are not available from NIST for a particular device, good security engineering practices along with manufacture guidelines is used to develop the security settings. The CM Manager conducts configuration audits to ensure baseline compliance and documentation of hardware/software configurations throughout the system lifecycle.
 
-    {% if project.file_server and project.file_server.file_server.scap_scan_report %}
-    A security scan was performed on the system (hostname {{project.file_server.file_server.hostname}}):
-    
-    {{project.file_server.file_server.scap_scan_report}}
-    {% endif %}
-
-    {% if project.file_server and project.file_server.file_server.port_scan_output %}
-    A port scan was performed on the system (hostname {{project.file_server.file_server.hostname}}).
-    The scan determined that the following ports are open:
-
-    {{project.file_server.file_server.port_scan_output}}
-    {% endif %}
-
     **Control Type:** System Specific
 
 
@@ -3238,6 +3225,19 @@ output:
     **In-Place Controls:**
 
     The TACR System uses vulnerability scanning software to document and determine risks to the system. These scans are being run on a regular basis and the results of these scans are being used to inform changes to the system and verify that security controls are working correctly. These scans are used to document the current state of the system, and to analyze security trends as changes are made over time.
+
+    {% if project.file_server and project.file_server.file_server.scap_scan_report %}
+    A security scan was performed on the system (hostname {{project.file_server.file_server.hostname}}):
+    
+    {{project.file_server.file_server.scap_scan_report}}
+    {% endif %}
+
+    {% if project.file_server and project.file_server.file_server.port_scan_output %}
+    A port scan was performed on the system (hostname {{project.file_server.file_server.hostname}}).
+    The scan determined that the following ports are open:
+
+    {{project.file_server.file_server.port_scan_output}}
+    {% endif %}
 
     **Control Type:** System-Specific
 
