@@ -640,3 +640,8 @@ questions:
   type: module
   module-id: ssp
   group: System Security Plan
+output:
+  - id: govready_lifecycle_stage_code
+    format: text
+    template: us_nist_rmf_2_select
+
